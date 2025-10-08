@@ -24,7 +24,6 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin(origins = "http://localhost:4200") // Angular dev server
 public class HubController {
 
     private static final Logger log = LoggerFactory.getLogger(HubController.class);
