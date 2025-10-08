@@ -463,3 +463,11 @@ Caused by: java.lang.RuntimeException: Driver com.microsoft.sqlserver.jdbc.SQLSe
 	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419) ~[spring-orm-6.2.9.jar:6.2.9]
 	... 102 common frames omitted
 
+2025-10-08T12:28:45.203-04:00  INFO 23128 --- [move] [main] com.next.move.MoveApplication            : Starting MoveApplication using Java 24.0.1 with PID 23128 (C:\Users\arash\OneDrive\Desktop\Next Move\move2\target\classes started by arash in C:\Users\arash\OneDrive\Desktop\Next Move\move2)
+2025-10-08T12:28:45.207-04:00 DEBUG 23128 --- [move] [main] com.next.move.MoveApplication            : Running with Spring Boot v3.5.4, Spring v6.2.9
+2025-10-08T12:28:45.208-04:00  INFO 23128 --- [move] [main] com.next.move.MoveApplication            : The following 1 profile is active: "dev"
+2025-10-08T12:28:51.975-04:00  WARN 23128 --- [move] [main] org.hibernate.orm.deprecation            : HHH90000025: SQLServerDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-08T12:28:55.851-04:00  INFO 23128 --- [move] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-10-08T12:28:58.581-04:00  WARN 23128 --- [move] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-08T12:28:59.198-04:00 DEBUG 23128 --- [move] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, OAuth2AuthorizationRequestRedirectFilter, OAuth2LoginAuthenticationFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-10-08T12:29:00.036-04:00  INFO 23128 --- [move] [main] com.next.move.MoveApplication            : Started MoveApplication in 15.973 seconds (process running for 17.212)
