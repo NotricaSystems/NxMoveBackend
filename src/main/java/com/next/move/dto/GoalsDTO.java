@@ -19,6 +19,7 @@ public record GoalsDTO(
         String startDate,
         String createdDate,
         String lastPausedDate,
+        Boolean notified,
         List<SubtasksDTO> subtasksList) {
 
     public static GoalsDTO fromEntity(Goals goal) {
@@ -37,6 +38,7 @@ public record GoalsDTO(
                 goal.getStartDate() == null ? "" : goal.getStartDate().toString(),
                 goal.getCreatedDate() == null ? "" : goal.getCreatedDate().toString(),
                 goal.getLastPausedDate() == null ? "" : goal.getLastPausedDate().toString(),
+                goal.getNotified(),
                 goal.getSubtasksList() == null ? List.of() :
                         goal.getSubtasksList().stream()
                                 .map(SubtasksDTO::fromEntity)

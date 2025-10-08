@@ -10,12 +10,17 @@ import com.next.move.models.Plan;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.ai.chat.client.ChatClient;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+import org.springframework.data.domain.PageRequest;
+
+import java.util.List;
 
 @Service
 public class ChatGptService {
 
     private final ChatClient chatClient;
+    private final DataService dataService;
     private static final Logger log = LoggerFactory.getLogger(HubController.class);
 
     private static final String[] intensity = {
@@ -28,7 +33,8 @@ public class ChatGptService {
             "Aggressive and vulgar"
     };
 
-    public ChatGptService(ChatClient.Builder builder) {
+    public ChatGptService(DataService dataService, ChatClient.Builder builder) {
+        this.dataService = dataService;
         this.chatClient = builder
                 .build();
     }
@@ -59,6 +65,7 @@ public class ChatGptService {
                 "And also break it down to maximum three essential sub tasks that you thing finishing these task will get me to the goal." +
                 "Each subtask must have a main sentence (at least two words). Also please provide at least 3 description sentences for each subtask. " +
                 "At the beginning of each subtask, should be a percentage indicating the amount of total time should be spent on each of them. " +
+                "Please don't stick to the same percentage each time. " +
                 "Each task must have a priority or order number (1 to 3). ";
 
         String format = "Please format your answer as a JSON object. " +
@@ -78,29 +85,37 @@ public class ChatGptService {
     public Plan planTheGoal(String goal) throws JsonProcessingException {
         String plan = askChatGpt(goalPlannerPrompt(goal));
         ObjectMapper mapper = new ObjectMapper().enable(JsonReadFeature.ALLOW_TRAILING_COMMA.mappedFeature());
-        //Modify this later to return a ResponseEntity
         return mapper.readValue(plan, Plan.class);
     }
 
     public String aiNotifGenerator(Goals goal, boolean timeIsUp) {
+        List<Notifications> prevNotifications = dataService.getTheLatestNotifications(goal.getId());
         //If the OpenAI didn't respond, or it delayed for a long time, I can send and static message
-        String prompt = "Assume that you are acting as a supportive mentor or friend. " +
-                "A user has set  \"" + goal.getTitle() + "\" as their goal or routine, " +
-                "and wants to achieve/complete it within remaining time " + remainingTime(goal) +
-                ". You have agreed to send encouraging or reminding messages every " + notificationFreq(goal) +
-                ". Write a motivational (if it's a goal) or a reminder message (if it's a routine) of around 3 sentences " +
-                "and it must be less than 100 characters, directly addressing the mentee. " +
-                "The tone must be " + intensity[goal.getIntensity()] + " and  match whether it’s a goal (focused on achievement) or a routine (focused on consistency). " +
-                "The text shouldn't have any format, just plain text.";
+        StringBuilder prompt = new StringBuilder("Assume that you are acting as a supportive mentor or friend. " +
+                "A user has set  \"" + goal.getTitle() + "\" as their goal or routine " +
+                "and wants to achieve/complete it within remaining time " + remainingTime(goal.getRemainingSeconds()) +
+                ". You have agreed to send encouraging, follow ups or reminding messages every " + notificationFreq(goal) +
+                ". Begin by checking in with the user, ask how they’re progressing with the task or how they’re doing on their goal. " +
+                "Limit your message to around 4 sentences (less than 100 characters). " +
+                "The tone must be " + intensity[goal.getIntensity()] + " and prevent cliches at all costs " +
+                "The text shouldn't have any format, just plain text. " +
+                "Do not use bad word that might go against carriers like Twilio guidelines. ");
+
+        if (!prevNotifications.isEmpty()) {
+            prompt.append("Please do not use any sentence from your previous responses, these are some of your previous responses: ");
+            for (Notifications notif: prevNotifications) {
+                prompt.append("\"").append(notif.getNotification()).append("\",");
+            }
+        }
 
         System.out.println(prompt);
-        return askChatGpt(prompt);
+        return censorContent(askChatGpt(prompt.toString()));
     }
 
     public String aiReplyBackGenerator(Goals goal, Notifications latestNotification, String usersMessage) {
         String prompt = "Assume that you are acting as a supportive mentor or friend. " +
                 "A user has set  \"" + goal.getTitle() + "\" as their goal or routine, " +
-                "and wants to achieve/complete it within remaining time " + remainingTime(goal) +
+                "and wants to achieve/complete it within remaining time " + remainingTime(goal.getRemainingSeconds()) +
                 ". You have agreed to send encouraging or reminding messages every " + notificationFreq(goal) +
                 " The person has now replied to your last message, and it is: \"" + usersMessage +
                 "\". In your response, directly acknowledge their reply and continue the conversation naturally. " +
@@ -110,16 +125,27 @@ public class ChatGptService {
                 "If their reply is positive and shows progress, reinforce their momentum, " +
                 "celebrate their wins, and encourage them to keep going strong. " +
                 "Write a reply for fewer than 100 characters, directly addressing the sender. " +
-                "The tone must be " + intensity[goal.getIntensity()] + " and  match whether it’s a goal (focused on achievement) or a routine (focused on consistency). " +
-                "The text shouldn't have any format, just plain text.";
+                "The tone must be " + intensity[goal.getIntensity()] +
+                "The text shouldn't have any format, just plain text. " +
+                "Do not use bad word that might go against carriers like Twilio guidelines. ";
 
         System.out.println(prompt);
-        return askChatGpt(prompt);
+        return censorContent(askChatGpt(prompt));
     }
 
-    private String remainingTime(Goals goal) {
-        long totalSeconds = goal.getRemainingSeconds();
+    private String censorContent(String content) {
+        content = content.replaceAll("fuck", ".uck");
+        content = content.replaceAll(" ass ", " .ss ");
+        content = content.replaceAll(" ass.", " .ss.");
+        content = content.replaceAll(" ass,", " .ss,");
+        content = content.replace(" ass?", " .ss?");
+        content = content.replace(" ass!", " .ss!");
+        content = content.replaceAll(" shit ", " .hit ");
+        content = content.replace(" shit", " .hit");
+        return content;
+    }
 
+    private String remainingTime(long totalSeconds) {
         long days = totalSeconds / (24 * 3600);
         totalSeconds %= (24 * 3600);
         long hours = totalSeconds / 3600;
@@ -154,5 +180,6 @@ public class ChatGptService {
         }
         return notifFreq;
     }
+
 
 }

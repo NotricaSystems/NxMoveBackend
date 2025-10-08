@@ -56,7 +56,7 @@ public class NotifierService {
     // Alternative: run at the start of each minute
     //@Scheduled(cron = "0 * * * * *") // second, minute, hour, day, month, weekday
     // Run every minute
-    //@Scheduled(fixedRate = 60_000) // every 60 seconds from start
+    @Scheduled(fixedRate = 30_000) // every 30 seconds from start
     public void notifier() {
         System.out.println("Notifier at work...");
         List<Goals> activeGoals = this.dataService.retrieveActiveGoals();
@@ -64,14 +64,14 @@ public class NotifierService {
         for (Goals goal : activeGoals) {
             try {
                 long seconds = ChronoUnit.SECONDS.between(goal.getStartDate(), Instant.now());
-                if (!goal.getNotified() || seconds >= (60L * goal.getFrequency())) {
+                if (!goal.getNotified() || seconds >= (60L * goal.getFrequency() - 15)) {
                     goal.setStartDate(Instant.now());
                     goal.setRemainingSeconds(goal.getRemainingSeconds() - (int) seconds);
                     goal.setNotified(true);
                     boolean timeIsUp = false;
                     if (goal.getRemainingSeconds() <= 0) {
-                        //time is up
                         goal.setRemainingSeconds(0);
+                        goal.setStatus(GoalStatus.OVERDUE.getCode());
                         timeIsUp = true;
                     }
                     this.dataService.updateGoal(goal);

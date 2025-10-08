@@ -3,10 +3,7 @@ package com.next.move.controllers;
 import com.next.move.dto.GoalsDTO;
 import com.next.move.dto.UserProfileDTO;
 import com.next.move.enums.SubStatus;
-import com.next.move.models.Goals;
-import com.next.move.models.Notifications;
-import com.next.move.models.Plan;
-import com.next.move.models.UserProfile;
+import com.next.move.models.*;
 import com.next.move.services.*;
 import com.next.move.utilities.RandomPasswordGenerator;
 import org.springframework.ai.chat.client.ChatClient;
@@ -52,52 +49,65 @@ public class HubController {
     }
 
     @GetMapping("/planner")
-    Plan goalPlanner(@RequestParam(value = "goal") String goal) throws Exception {
+    ResponseEntity<Plan> goalPlanner(@RequestParam(value = "goal") String goal) throws Exception {
         try {
-            return chatGptService.planTheGoal(goal);
+            return ResponseEntity.ok(chatGptService.planTheGoal(goal));
         } catch (Exception e) {
-            //Modify this later to return a ResponseEntity
             log.error(e.getMessage());
-            return null;
+            System.out.println(e.getMessage());
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         }
     }
 
     @PostMapping("/signup")
     public ResponseEntity<UserProfileDTO> signup(@Valid @RequestBody UserProfile request) throws Exception {
-        // If validation passes, you can safely save the user
-        // Otherwise, Spring will automatically throw MethodArgumentNotValidException
-        UserProfile newRegisteredUser = new UserProfile();
-        Optional<UserProfile> userProfile = dataService.getUserProfile(request.getEmail());
-        if (userProfile.isPresent()) {
-            if (userProfile.get().getPassword() != null && !userProfile.get().getPassword().isBlank()) {
-                throw new Exception("A User is already registered with this email");
-            } else {
-                newRegisteredUser.setId(userProfile.get().getId());
+        try {
+            // If validation passes, you can safely save the user
+            // Otherwise, Spring will automatically throw MethodArgumentNotValidException
+            UserProfile newRegisteredUser = new UserProfile();
+            Optional<UserProfile> userProfile = dataService.getUserProfile(request.getEmail());
+            if (userProfile.isPresent()) {
+                if (userProfile.get().getPassword() != null && !userProfile.get().getPassword().isBlank()) {
+                    throw new Exception("A User is already registered with this email");
+                } else {
+                    newRegisteredUser.setId(userProfile.get().getId());
+                }
             }
-        }
-        newRegisteredUser.setEmail(request.getEmail());
-        newRegisteredUser.setPhone(request.getPhone());
-        newRegisteredUser.setGivenName(request.getGivenName());
-        newRegisteredUser.setSubscriptionPlan(request.getSubscriptionPlan());
-        newRegisteredUser.setSubscriptionStatus(request.getSubscriptionStatus());
-        newRegisteredUser.setPassword(passwordEncoder.encode(request.getPassword()));
-        newRegisteredUser = dataService.updateUserProfile(newRegisteredUser);
+            newRegisteredUser.setEmail(request.getEmail());
+            newRegisteredUser.setPhone(request.getPhone());
+            newRegisteredUser.setGivenName(request.getGivenName());
+            newRegisteredUser.setSubscriptionPlan(request.getSubscriptionPlan());
+            newRegisteredUser.setSubscriptionStatus(request.getSubscriptionStatus());
+            newRegisteredUser.setPassword(passwordEncoder.encode(request.getPassword()));
+            newRegisteredUser = dataService.updateUserProfile(newRegisteredUser);
 
-        return ResponseEntity.ok(UserProfileDTO.fromEntity(newRegisteredUser));
+            return ResponseEntity.ok(UserProfileDTO.fromEntity(newRegisteredUser));
+        } catch (Exception e) {
+            log.error(e.getMessage());
+            System.out.println(e.getMessage());
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+        }
     }
 
     @PostMapping("/receive")
     ResponseEntity<?> receiveResponse(@RequestParam Map<String, String> params) {
-        // params contains all form fields
-        String body = params.get("Body");
-        String phone = params.get("From");
+        try {
+            // params contains all form fields
+            String body = params.get("Body");
+            String phone = params.get("From");
 
-        System.out.println("text received: " + body);
-        if (body.isBlank()) {
-            return (ResponseEntity<?>) ResponseEntity.ok();
-        } else {
-            //Call a service to store the user's response and to generate an AI generated reply
-            return ResponseEntity.ok("Message: " + notifierService.replyBack(phone, body));
+            System.out.println("text received: " + body);
+            if (body.isBlank()) {
+                return (ResponseEntity<?>) ResponseEntity.ok();
+            } else {
+                //Call a service to store the user's response and to generate an AI generated reply
+                return ResponseEntity.ok("Message: " + notifierService.replyBack(phone, body));
+            }
+        } catch (Exception e) {
+            //Modify this later to return a ResponseEntity
+            log.error(e.getMessage());
+            System.out.println(e.getMessage());
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         }
     }
 
@@ -120,8 +130,9 @@ public class HubController {
             updatedUserProfile.setPassword("");
             return ResponseEntity.ok(UserProfileDTO.fromEntity(updatedUserProfile));
         } catch (Exception e) {
+            log.error(e.getMessage());
             System.out.println(e.getMessage());
-            return null;
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         }
     }
 
@@ -137,7 +148,8 @@ public class HubController {
             return ResponseEntity.ok(UserProfileDTO.fromEntity(userProfileWithArchive));
         } catch (Exception e) {
             log.error(e.getMessage());
-            return null;
+            System.out.println(e.getMessage());
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         }
     }
 
@@ -147,8 +159,9 @@ public class HubController {
             Goals updatedGoal = dataService.updateGoal(goal);
             return ResponseEntity.ok(GoalsDTO.fromEntity(updatedGoal));
         } catch (Exception e) {
+            log.error(e.getMessage());
             System.out.println(e.getMessage());
-            return null;
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         }
     }
 
@@ -163,15 +176,20 @@ public class HubController {
                 return ResponseEntity.badRequest().build();
             }
         } catch (Exception e) {
+            log.error(e.getMessage());
+            System.out.println(e.getMessage());
             return ResponseEntity.badRequest().build();
         }
     }
 
     @PostMapping("/notification")
-    ResponseEntity<Optional<Notifications>> getLatestNotification(@RequestBody Goals goal) throws Exception {
+    ResponseEntity<Notifications> getLatestNotification(@RequestBody Goals goal) throws Exception {
         try {
-            return  ResponseEntity.ok(dataService.getTheLatestNotification(goal));
+            Optional<Notifications> notifications = dataService.getTheLatestNotification(goal);
+            return notifications.map(ResponseEntity::ok).orElse(null);
         } catch (Exception e) {
+            log.error(e.getMessage());
+            System.out.println(e.getMessage());
             return ResponseEntity.badRequest().build();
         }
     }
@@ -197,6 +215,7 @@ public class HubController {
                         .body("No account is associated with this email address. Please verify your email or sign up to create an account.");
             }
         } catch (Exception e) {
+            log.error(e.getMessage());
             System.out.println(e.getMessage());
             return ResponseEntity
                     .status(HttpStatus.BAD_REQUEST)
@@ -211,8 +230,9 @@ public class HubController {
             UserProfile updatedGoal = conductorService.pauseGoal(userProfile);
             return ResponseEntity.ok(UserProfileDTO.fromEntity(updatedGoal));
         } catch (Exception e) {
+            log.error(e.getMessage());
             System.out.println(e.getMessage());
-            return null;
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         }
     }
 
@@ -222,6 +242,21 @@ public class HubController {
             UserProfile updatedGoal = conductorService.restartGoal(userProfile);
             return ResponseEntity.ok(UserProfileDTO.fromEntity(updatedGoal));
         } catch (Exception e) {
+            log.error(e.getMessage());
+            System.out.println(e.getMessage());
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+        }
+    }
+
+    @PostMapping("/frontend/log")
+    ResponseEntity<?> logFrontendError(@RequestBody String errorMessage) throws Exception {
+        try {
+            FrontendException frontendException = new FrontendException();
+            frontendException.setErrorMessage(errorMessage);
+            dataService.storeFrontendError(frontendException);
+            return ResponseEntity.ok().build();
+        } catch (Exception e) {
+            log.error(e.getMessage());
             System.out.println(e.getMessage());
             return null;
         }

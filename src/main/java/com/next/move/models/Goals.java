@@ -46,4 +46,5 @@ public class Goals {
 
     @OneToMany(mappedBy = "goal", cascade = CascadeType.ALL, orphanRemoval = false, fetch = FetchType.EAGER)
     private List<Subtasks> subtasksList;
+
 }

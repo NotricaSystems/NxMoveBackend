@@ -48,7 +48,7 @@ public class SecurityConfig {
                         .sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED))
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/api/auth/**", "/oauth2/**",
-                                "/api/planner", "/api/signup","/api/receive", "/api/forgotpassword", "/api/simulation").permitAll()
+                                "/api/planner", "/api/signup","/api/receive", "/api/forgotpassword", "/frontend/log", "/api/simulation").permitAll()
                         .anyRequest().authenticated()
                 )
                 .formLogin(AbstractHttpConfigurer::disable) // removes Spring's login form

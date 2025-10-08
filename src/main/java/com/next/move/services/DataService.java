@@ -2,14 +2,14 @@ package com.next.move.services;
 
 import com.next.move.enums.GoalStatus;
 import com.next.move.enums.NotifType;
-import com.next.move.models.Goals;
-import com.next.move.models.Notifications;
-import com.next.move.models.Subtasks;
-import com.next.move.models.UserProfile;
+import com.next.move.models.*;
+import com.next.move.repository.FrontendExceptionRepository;
 import com.next.move.repository.GoalRepository;
 import com.next.move.repository.NotificationRepository;
 import com.next.move.repository.UserRepository;
 import jakarta.transaction.Transactional;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.time.Instant;
@@ -23,13 +23,16 @@ public class DataService {
     private final UserRepository userRepository;
     private final GoalRepository goalRepository;
     private final NotificationRepository notificationRepository;
+    private final FrontendExceptionRepository frontendExceptionRepository;
 
     public DataService(UserRepository userRepository,
                        GoalRepository goalRepository,
-                       NotificationRepository notificationRepository) {
+                       NotificationRepository notificationRepository,
+                       FrontendExceptionRepository frontendExceptionRepository) {
         this.userRepository = userRepository;
         this.goalRepository = goalRepository;
         this.notificationRepository = notificationRepository;
+        this.frontendExceptionRepository = frontendExceptionRepository;
     }
 
     public List<UserProfile> getAllUsers() { return this.userRepository.findAll();}
@@ -85,12 +88,22 @@ public class DataService {
     public Optional<Notifications> getTheLatestNotification(Goals goal) {
         Instant since = Instant.now().minus(15, ChronoUnit.MINUTES);
         Optional<Notifications> notification = this.notificationRepository
-                .getTheLatestNotificationByGoalId(goal.getId(), since)
+                .notificationsBrowserNotNotified(goal.getId(), since)
                 .stream().findFirst();
         if (notification.isPresent()) {
             notification.ifPresent(n -> n.setBrowserNotified(true));
+            notificationRepository.saveAndFlush(notification.get());
         }
         return notification;
+    }
+
+    public List<Notifications> getTheLatestNotifications(Long goalId) {
+        Pageable limit3 = PageRequest.of(0, 3);
+        return notificationRepository.latestNotifications(goalId, limit3);
+    }
+
+    public void storeFrontendError(FrontendException frontendException) {
+        frontendExceptionRepository.saveAndFlush(frontendException);
     }
 
 }
