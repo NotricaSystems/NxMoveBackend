@@ -5,6 +5,7 @@ import com.next.move.models.UserProfile;
 import com.next.move.repository.UserRepository;
 import com.next.move.security.*;
 import com.next.move.services.DataService;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseCookie;
@@ -33,6 +34,9 @@ public class AuthController {
     private final JwtUtils jwtUtils;
     private final RefreshTokenService refreshTokenService;
     private final DataService dataService;
+
+    @Value("${backend.domain}")
+    private String backendDomain;
 
     public AuthController(
             AuthenticationManager authManager,
@@ -63,7 +67,7 @@ public class AuthController {
 
         ResponseCookie cookie = ResponseCookie.from("refreshToken", refreshToken.getToken())
                 .httpOnly(true).secure(true).path("/api/auth/refresh")
-                .maxAge(maxAge).sameSite("None").build();
+                .maxAge(maxAge).sameSite("None").domain(backendDomain).build();
         resp.addHeader(HttpHeaders.SET_COOKIE, cookie.toString());
 
         UserProfile userProfile = dataService.getUserProfile(req.getUsername())
@@ -87,7 +91,7 @@ public class AuthController {
 
         ResponseCookie cookie = ResponseCookie.from("refreshToken", newRt.getToken())
                 .httpOnly(true).secure(true).path("/api/auth/refresh")
-                .maxAge(maxAge).sameSite("None").build();
+                .maxAge(maxAge).sameSite("None").domain(backendDomain).build();
         resp.addHeader(HttpHeaders.SET_COOKIE, cookie.toString());
 
         return ResponseEntity.ok(new AccessTokenResponse(accessToken, refreshTokenService.getRefreshTokenDurationMs()));

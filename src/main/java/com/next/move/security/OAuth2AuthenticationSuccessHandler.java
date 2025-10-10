@@ -9,6 +9,7 @@ import com.next.move.services.DataService;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseCookie;
 import org.springframework.security.core.Authentication;
@@ -27,6 +28,9 @@ public class OAuth2AuthenticationSuccessHandler extends SimpleUrlAuthenticationS
     private final JwtUtils jwtUtils;
     private final RefreshTokenService refreshTokenService;
     private final DataService dataService;
+
+    @Value("${backend.domain}")
+    private String backendDomain;
 
     public OAuth2AuthenticationSuccessHandler(JwtUtils jwtUtils,
                                               RefreshTokenService refreshTokenService,
@@ -83,7 +87,8 @@ public class OAuth2AuthenticationSuccessHandler extends SimpleUrlAuthenticationS
         ResponseCookie cookie = ResponseCookie.from("refreshToken", refreshToken.getToken())
                 .httpOnly(true).secure(true).path("/api/auth/refresh")
                 .maxAge(refreshToken.getExpiryDate().getEpochSecond() - Instant.now().getEpochSecond())
-                .sameSite("None").build();
+                .sameSite("None").domain(backendDomain)  // allow both nx-move.com and api.nx-move.com
+                .build();
 
         response.addHeader(HttpHeaders.SET_COOKIE, cookie.toString());
 
