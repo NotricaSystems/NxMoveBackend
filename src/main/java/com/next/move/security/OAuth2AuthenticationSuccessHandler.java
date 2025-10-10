@@ -83,7 +83,7 @@ public class OAuth2AuthenticationSuccessHandler extends SimpleUrlAuthenticationS
         ResponseCookie cookie = ResponseCookie.from("refreshToken", refreshToken.getToken())
                 .httpOnly(true).secure(true).path("/api/auth/refresh")
                 .maxAge(refreshToken.getExpiryDate().getEpochSecond() - Instant.now().getEpochSecond())
-                .sameSite("Lax").build();
+                .sameSite("None").build();
 
         response.addHeader(HttpHeaders.SET_COOKIE, cookie.toString());
 

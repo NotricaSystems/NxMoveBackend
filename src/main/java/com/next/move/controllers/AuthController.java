@@ -63,7 +63,7 @@ public class AuthController {
 
         ResponseCookie cookie = ResponseCookie.from("refreshToken", refreshToken.getToken())
                 .httpOnly(true).secure(true).path("/api/auth/refresh")
-                .maxAge(maxAge).sameSite("Lax").build();
+                .maxAge(maxAge).sameSite("None").build();
         resp.addHeader(HttpHeaders.SET_COOKIE, cookie.toString());
 
         UserProfile userProfile = dataService.getUserProfile(req.getUsername())
@@ -87,7 +87,7 @@ public class AuthController {
 
         ResponseCookie cookie = ResponseCookie.from("refreshToken", newRt.getToken())
                 .httpOnly(true).secure(true).path("/api/auth/refresh")
-                .maxAge(maxAge).sameSite("Lax").build();
+                .maxAge(maxAge).sameSite("None").build();
         resp.addHeader(HttpHeaders.SET_COOKIE, cookie.toString());
 
         return ResponseEntity.ok(new AccessTokenResponse(accessToken, refreshTokenService.getRefreshTokenDurationMs()));
