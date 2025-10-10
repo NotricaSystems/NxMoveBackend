@@ -69,7 +69,7 @@ public class SecurityConfig {
                 //.sessionManagement(sm -> sm.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 // Allow OAuth2 login to use session temporarily
                 .sessionManagement(session -> session
-                        .sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED))
+                        .sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/api/auth/**", "/oauth2/**",
                                 "/api/planner", "/api/signup","/api/receive", "/api/forgotpassword", "/frontend/log", "/api/simulation").permitAll()
