@@ -20,18 +20,21 @@ public class TwilioService {
     private String AUTH_TOKEN;
     @Value("${twilio.phone.number.sms}")
     private String TWILIO_PHONE_NUMBER_SMS;
-    @Value("${twilio.phone.number.whatsapp}")
-    private String TWILIO_PHONE_NUMBER_WHATSAPP;
+
+    //@Value("${twilio.phone.number.whatsapp}")
+    //private String TWILIO_PHONE_NUMBER_WHATSAPP;
 
     public void sendText(String phoneNumber, String txtMessage, Goals goal) {
         try {
             System.out.println("Sending the text...");
             String senderNumber = TWILIO_PHONE_NUMBER_SMS;
             String prefix = "";
+            /*
             if (goal.getWhatsappNotif()) {
                 prefix = "whatsapp:";
                 senderNumber = TWILIO_PHONE_NUMBER_WHATSAPP;
-            }
+            }*/
+
             Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
             Message message = Message.creator(
                             new com.twilio.type.PhoneNumber(prefix + phoneNumber),
