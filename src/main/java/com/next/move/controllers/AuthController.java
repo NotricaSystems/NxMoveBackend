@@ -102,7 +102,9 @@ public class AuthController {
                                     HttpServletResponse resp) {
         if (refreshTokenCookie != null) refreshTokenService.revokeByToken(refreshTokenCookie);
         ResponseCookie cookie = ResponseCookie.from("refreshToken", "")
-                .httpOnly(true).secure(true).path("/api/auth/refresh").maxAge(0).build();
+                .httpOnly(true).secure(true).path("/api/auth/refresh").maxAge(0)
+                .sameSite("None").domain(backendDomain).build();
+
         resp.addHeader(HttpHeaders.SET_COOKIE, cookie.toString());
         return ResponseEntity.ok().build();
     }
