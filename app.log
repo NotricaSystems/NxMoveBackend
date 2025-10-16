@@ -212,3 +212,290 @@ Caused by: java.nio.channels.UnresolvedAddressException: null
 2025-10-16T13:09:05.237-04:00  WARN 28228 --- [move] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
 2025-10-16T13:09:06.130-04:00 DEBUG 28228 --- [move] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, OAuth2AuthorizationRequestRedirectFilter, OAuth2LoginAuthenticationFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
 2025-10-16T13:09:07.063-04:00  INFO 28228 --- [move] [main] com.next.move.MoveApplication            : Started MoveApplication in 19.784 seconds (process running for 21.055)
+2025-10-16T14:52:19.698-04:00  INFO 32576 --- [move] [main] com.next.move.MoveApplication            : Starting MoveApplication using Java 24.0.1 with PID 32576 (C:\Users\arash\OneDrive\Desktop\Next Move\move2\target\classes started by arash in C:\Users\arash\OneDrive\Desktop\Next Move\move2)
+2025-10-16T14:52:19.702-04:00 DEBUG 32576 --- [move] [main] com.next.move.MoveApplication            : Running with Spring Boot v3.5.4, Spring v6.2.9
+2025-10-16T14:52:19.704-04:00  INFO 32576 --- [move] [main] com.next.move.MoveApplication            : The following 1 profile is active: "dev"
+2025-10-16T14:52:27.257-04:00  WARN 32576 --- [move] [main] org.hibernate.orm.deprecation            : HHH90000025: SQLServerDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-16T14:52:32.055-04:00  INFO 32576 --- [move] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-10-16T14:52:34.924-04:00  WARN 32576 --- [move] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-16T14:52:35.675-04:00 DEBUG 32576 --- [move] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, OAuth2AuthorizationRequestRedirectFilter, OAuth2LoginAuthenticationFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-10-16T14:52:36.417-04:00  INFO 32576 --- [move] [main] com.next.move.MoveApplication            : Started MoveApplication in 18.005 seconds (process running for 19.28)
+2025-10-16T14:53:17.283-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/refresh
+2025-10-16T14:53:17.313-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/refresh
+2025-10-16T14:53:17.320-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-16T14:53:17.321-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-2] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 9B670211090468BE38AF5182530B3F75
+2025-10-16T14:53:17.325-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/refresh
+2025-10-16T14:53:17.543-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /api/frontend/log
+2025-10-16T14:53:17.545-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-16T14:53:17.588-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/refresh
+2025-10-16T14:53:17.590-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-16T14:53:17.591-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-4] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 9B670211090468BE38AF5182530B3F75
+2025-10-16T14:53:17.591-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/refresh
+2025-10-16T14:53:17.608-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/logout
+2025-10-16T14:53:17.614-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/logout
+2025-10-16T14:53:17.616-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-16T14:53:17.617-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-6] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 9B670211090468BE38AF5182530B3F75
+2025-10-16T14:53:17.617-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/logout
+2025-10-16T14:53:31.354-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /api/planner?goal=designing%20a%20race%20car
+2025-10-16T14:53:31.354-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-16T14:53:31.354-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /api/planner?goal=designing%20a%20race%20car
+2025-10-16T14:54:01.793-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /oauth2/authorization/google
+2025-10-16T14:54:01.849-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-8] o.s.s.web.DefaultRedirectStrategy        : Redirecting to https://accounts.google.com/o/oauth2/v2/auth?response_type=code&client_id=1082527571682-2lm7ku45vuq1baaouake6eqkq1cai7rh.apps.googleusercontent.com&scope=openid%20profile%20email&state=LQFyYVjoSS316WNdsrqMeAQmLWCHIKfVajcCQm7xnEE%3D&redirect_uri=http://localhost:8080/login/oauth2/code/google&nonce=RBOCpK27wMWNP-Z3aOt-Ok1XTK9ioijMhL6DbM56Qz0
+2025-10-16T14:54:05.060-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /login/oauth2/code/google?state=LQFyYVjoSS316WNdsrqMeAQmLWCHIKfVajcCQm7xnEE%3D&code=4%2F0AVGzR1DGPwhcjD6nTxmCpLSykh0R8gkrC9C-EnTK_JfF05QCkVRxuAZ5XcvpSAeD8OFjUQ&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&prompt=none
+2025-10-16T14:54:05.586-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-9] .s.ChangeSessionIdAuthenticationStrategy : Changed session id from 7F3DC2EE54018F34F8E123591907A566
+2025-10-16T14:54:05.586-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-9] .s.o.c.w.OAuth2LoginAuthenticationFilter : Set SecurityContextHolder to OAuth2AuthenticationToken [Principal=Name: [117920362650877219075], Granted Authorities: [[OIDC_USER, SCOPE_https://www.googleapis.com/auth/userinfo.email, SCOPE_https://www.googleapis.com/auth/userinfo.profile, SCOPE_openid]], User Attributes: [{at_hash=m4y1rPk9OSrfxde1S04fmQ, sub=117920362650877219075, email_verified=true, iss=https://accounts.google.com, given_name=Farid, nonce=RBOCpK27wMWNP-Z3aOt-Ok1XTK9ioijMhL6DbM56Qz0, picture=https://lh3.googleusercontent.com/a/ACg8ocKSZixPFTnyZgWdGRbQof_fIt9rx9akppKvZb3i4L23_vkO3ufE=s96-c, aud=[1082527571682-2lm7ku45vuq1baaouake6eqkq1cai7rh.apps.googleusercontent.com], azp=1082527571682-2lm7ku45vuq1baaouake6eqkq1cai7rh.apps.googleusercontent.com, name=Farid Marandi, exp=2025-10-16T19:54:04Z, family_name=Marandi, iat=2025-10-16T18:54:04Z, email=farid.marandi@gmail.com}], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=7F3DC2EE54018F34F8E123591907A566], Granted Authorities=[OIDC_USER, SCOPE_https://www.googleapis.com/auth/userinfo.email, SCOPE_https://www.googleapis.com/auth/userinfo.profile, SCOPE_openid]]
+2025-10-16T14:54:06.193-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/userprofile
+2025-10-16T14:54:06.199-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/userprofile
+2025-10-16T14:54:06.380-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /api/userprofile
+2025-10-16T14:54:41.603-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/logout
+2025-10-16T14:54:41.613-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/logout
+2025-10-16T14:54:41.721-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-3] .s.ChangeSessionIdAuthenticationStrategy : Changed session id from 25963AFB40D90BFBF876B0F1A73CF3A1
+2025-10-16T14:54:41.721-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/logout
+2025-10-16T14:54:52.186-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /oauth2/authorization/google
+2025-10-16T14:54:52.186-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-4] o.s.s.web.DefaultRedirectStrategy        : Redirecting to https://accounts.google.com/o/oauth2/v2/auth?response_type=code&client_id=1082527571682-2lm7ku45vuq1baaouake6eqkq1cai7rh.apps.googleusercontent.com&scope=openid%20profile%20email&state=39590St3SU4igG6J04OCUm_oUr5cqiUmrdNZ8aFgP_U%3D&redirect_uri=http://localhost:8080/login/oauth2/code/google&nonce=XK_mwUW1vqt4G8Am54PLurBbushwtpp--opPpmV11qk
+2025-10-16T14:54:55.589-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /login/oauth2/code/google?state=39590St3SU4igG6J04OCUm_oUr5cqiUmrdNZ8aFgP_U%3D&code=4%2F0AVGzR1CT9VNNrr5YFCNAe11OaAfrdm1GUBGUZARhB6q9SvF8UcjAM9r3Rz_gjfYuP-2b8g&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&authuser=1&hd=profitsmoothies.com&prompt=none
+2025-10-16T14:54:55.854-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-5] .s.ChangeSessionIdAuthenticationStrategy : Changed session id from ADB2865D454E0AEF507BD1CABD2C1547
+2025-10-16T14:54:55.854-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-5] .s.o.c.w.OAuth2LoginAuthenticationFilter : Set SecurityContextHolder to OAuth2AuthenticationToken [Principal=Name: [110534465410343700587], Granted Authorities: [[OIDC_USER, SCOPE_https://www.googleapis.com/auth/userinfo.email, SCOPE_https://www.googleapis.com/auth/userinfo.profile, SCOPE_openid]], User Attributes: [{at_hash=3pTuvhfmvQp1KdnCRV1Jyw, sub=110534465410343700587, email_verified=true, iss=https://accounts.google.com, given_name=Farid, nonce=XK_mwUW1vqt4G8Am54PLurBbushwtpp--opPpmV11qk, picture=https://lh3.googleusercontent.com/a/ACg8ocLYX3GK262MhIkpkmf7XWdRu0xGRYnmJQgvUTYz9Kqb1y4shg=s96-c, aud=[1082527571682-2lm7ku45vuq1baaouake6eqkq1cai7rh.apps.googleusercontent.com], azp=1082527571682-2lm7ku45vuq1baaouake6eqkq1cai7rh.apps.googleusercontent.com, name=Farid MARANDI, hd=profitsmoothies.com, exp=2025-10-16T19:54:55Z, family_name=MARANDI, iat=2025-10-16T18:54:55Z, email=farid@profitsmoothies.com}], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=ADB2865D454E0AEF507BD1CABD2C1547], Granted Authorities=[OIDC_USER, SCOPE_https://www.googleapis.com/auth/userinfo.email, SCOPE_https://www.googleapis.com/auth/userinfo.profile, SCOPE_openid]]
+2025-10-16T14:54:55.979-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/userprofile
+2025-10-16T14:54:55.983-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /api/userprofile
+2025-10-16T14:54:56.025-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /api/userprofile
+2025-10-16T14:55:09.727-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/update
+2025-10-16T14:55:09.735-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /api/update
+2025-10-16T14:55:09.779-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured POST /api/update
+2025-10-16T14:55:13.190-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/userprofile
+2025-10-16T14:55:13.194-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /api/userprofile
+2025-10-16T14:55:13.243-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /api/userprofile
+2025-10-16T14:55:26.012-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /api/planner?goal=designing%20a%20new%20race%20car
+2025-10-16T14:55:26.012-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-16T14:55:26.014-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /api/planner?goal=designing%20a%20new%20race%20car
+2025-10-16T14:55:41.913-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/update
+2025-10-16T14:55:41.913-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /api/update
+2025-10-16T14:55:41.965-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /api/update
+2025-10-16T14:55:57.633-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/update
+2025-10-16T14:55:57.639-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /api/update
+2025-10-16T14:55:57.703-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured POST /api/update
+2025-10-16T14:56:02.321-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/userprofile
+2025-10-16T14:56:02.329-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /api/userprofile
+2025-10-16T14:56:02.392-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /api/userprofile
+2025-10-16T14:57:35.848-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/refresh
+2025-10-16T14:57:35.855-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/refresh
+2025-10-16T14:57:35.855-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-16T14:57:35.857-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/refresh
+2025-10-16T14:57:36.534-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/userprofile
+2025-10-16T14:57:36.539-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /api/userprofile
+2025-10-16T14:57:36.594-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /api/userprofile
+2025-10-16T14:58:51.273-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /api/planner?goal=designing%20a%20new%20race%20car
+2025-10-16T14:58:51.273-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-16T14:58:51.273-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /api/planner?goal=designing%20a%20new%20race%20car
+2025-10-16T14:59:28.326-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/update
+2025-10-16T14:59:28.331-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /api/update
+2025-10-16T14:59:28.400-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /api/update
+2025-10-16T15:00:28.491-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/notification
+2025-10-16T15:00:28.497-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /api/notification
+2025-10-16T15:00:28.537-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured POST /api/notification
+2025-10-16T15:01:29.346-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/notification
+2025-10-16T15:01:29.351-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /api/notification
+2025-10-16T15:01:29.399-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured POST /api/notification
+2025-10-16T15:02:29.343-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/notification
+2025-10-16T15:02:29.353-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /api/notification
+2025-10-16T15:02:29.405-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured POST /api/notification
+2025-10-16T15:03:29.356-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/notification
+2025-10-16T15:03:29.361-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /api/notification
+2025-10-16T15:03:29.404-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /api/notification
+2025-10-16T15:04:17.055-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/refresh
+2025-10-16T15:04:17.063-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/refresh
+2025-10-16T15:04:17.063-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-16T15:04:17.065-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/refresh
+2025-10-16T15:04:17.174-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/userprofile
+2025-10-16T15:04:17.180-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /api/userprofile
+2025-10-16T15:04:17.216-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /api/userprofile
+2025-10-16T15:04:49.953-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/update
+2025-10-16T15:04:49.957-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/update
+2025-10-16T15:04:50.020-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /api/update
+2025-10-16T15:04:57.607-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/userprofile
+2025-10-16T15:04:57.613-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /api/userprofile
+2025-10-16T15:04:57.657-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /api/userprofile
+2025-10-16T15:05:15.156-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /api/planner?goal=designing%20a%20new%20race%20car
+2025-10-16T15:05:15.156-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-16T15:05:15.160-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /api/planner?goal=designing%20a%20new%20race%20car
+2025-10-16T15:05:36.755-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/update
+2025-10-16T15:05:36.763-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /api/update
+2025-10-16T15:05:36.817-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured POST /api/update
+2025-10-16T15:06:37.345-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/notification
+2025-10-16T15:06:37.354-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /api/notification
+2025-10-16T15:06:37.392-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /api/notification
+2025-10-16T15:07:36.886-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/notification
+2025-10-16T15:07:36.890-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /api/notification
+2025-10-16T15:07:36.932-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured POST /api/notification
+2025-10-16T15:22:55.612-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/notification
+2025-10-16T15:22:55.618-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing POST /api/notification
+2025-10-16T15:22:55.635-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-16T15:22:55.791-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/refresh
+2025-10-16T15:22:55.806-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/refresh
+2025-10-16T15:22:55.808-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-16T15:22:55.808-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/refresh
+2025-10-16T15:22:56.013-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /api/notification
+2025-10-16T15:22:56.053-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured POST /api/notification
+2025-10-16T15:22:57.202-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/refresh
+2025-10-16T15:22:57.206-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-16T15:22:57.206-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/refresh
+2025-10-16T15:22:57.391-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/userprofile
+2025-10-16T15:22:57.393-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /api/userprofile
+2025-10-16T15:22:57.430-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /api/userprofile
+2025-10-16T15:23:02.170-04:00  WARN 32576 --- [move] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m4s718ms386µs900ns).
+2025-10-16T15:23:58.340-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/notification
+2025-10-16T15:23:58.345-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /api/notification
+2025-10-16T15:23:58.387-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /api/notification
+2025-10-16T15:24:58.367-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/notification
+2025-10-16T15:24:58.371-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /api/notification
+2025-10-16T15:24:58.401-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured POST /api/notification
+2025-10-16T15:25:58.348-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/notification
+2025-10-16T15:25:58.352-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /api/notification
+2025-10-16T15:25:58.387-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured POST /api/notification
+2025-10-16T15:26:58.342-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/notification
+2025-10-16T15:26:58.342-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /api/notification
+2025-10-16T15:26:58.386-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured POST /api/notification
+2025-10-16T15:27:58.338-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/notification
+2025-10-16T15:27:58.341-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/notification
+2025-10-16T15:27:58.385-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /api/notification
+2025-10-16T15:28:58.342-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/notification
+2025-10-16T15:28:58.348-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /api/notification
+2025-10-16T15:28:58.395-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured POST /api/notification
+2025-10-16T15:30:40.372-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/notification
+2025-10-16T15:30:40.378-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /api/notification
+2025-10-16T15:30:40.415-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured POST /api/notification
+2025-10-16T15:31:40.364-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/notification
+2025-10-16T15:31:40.370-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing POST /api/notification
+2025-10-16T15:31:40.400-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured POST /api/notification
+2025-10-16T15:32:40.372-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/notification
+2025-10-16T15:32:40.379-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /api/notification
+2025-10-16T15:32:40.408-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /api/notification
+2025-10-16T15:32:53.239-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/userprofile
+2025-10-16T15:32:53.244-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /api/userprofile
+2025-10-16T15:32:53.275-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /api/userprofile
+2025-10-16T15:33:08.421-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/goal/pause
+2025-10-16T15:33:08.425-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /api/goal/pause
+2025-10-16T15:33:08.459-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /api/goal/pause
+2025-10-16T15:33:12.828-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/logout
+2025-10-16T15:33:12.832-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/logout
+2025-10-16T15:33:12.866-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-7] .s.ChangeSessionIdAuthenticationStrategy : Changed session id from 04EF5BD4B7182390859022A92BAABB3E
+2025-10-16T15:33:12.866-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/logout
+2025-10-16T15:37:53.167-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/refresh
+2025-10-16T15:37:53.175-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/refresh
+2025-10-16T15:37:53.175-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-16T15:37:53.175-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/refresh
+2025-10-16T15:37:53.217-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/frontend/log
+2025-10-16T15:37:53.217-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-16T15:37:53.243-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/refresh
+2025-10-16T15:37:53.246-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-16T15:37:53.246-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/refresh
+2025-10-16T15:37:53.266-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/logout
+2025-10-16T15:37:53.274-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/logout
+2025-10-16T15:37:53.274-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-16T15:37:53.274-04:00 DEBUG 32576 --- [move] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/logout
+2025-10-16T16:06:20.498-04:00  INFO 11384 --- [move] [main] com.next.move.MoveApplication            : Starting MoveApplication using Java 24.0.1 with PID 11384 (C:\Users\arash\OneDrive\Desktop\Next Move\move2\target\classes started by arash in C:\Users\arash\OneDrive\Desktop\Next Move\move2)
+2025-10-16T16:06:20.501-04:00 DEBUG 11384 --- [move] [main] com.next.move.MoveApplication            : Running with Spring Boot v3.5.4, Spring v6.2.9
+2025-10-16T16:06:20.502-04:00  INFO 11384 --- [move] [main] com.next.move.MoveApplication            : The following 1 profile is active: "dev"
+2025-10-16T16:06:27.922-04:00  WARN 11384 --- [move] [main] org.hibernate.orm.deprecation            : HHH90000025: SQLServerDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-16T16:06:33.403-04:00  INFO 11384 --- [move] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-10-16T16:06:36.729-04:00  WARN 11384 --- [move] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-16T16:06:37.473-04:00 DEBUG 11384 --- [move] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, OAuth2AuthorizationRequestRedirectFilter, OAuth2LoginAuthenticationFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-10-16T16:06:38.664-04:00  INFO 11384 --- [move] [main] com.next.move.MoveApplication            : Started MoveApplication in 19.36 seconds (process running for 20.41)
+2025-10-16T16:08:19.073-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/refresh
+2025-10-16T16:08:19.107-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/refresh
+2025-10-16T16:08:19.117-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-16T16:08:19.117-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-2] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D1E3E0678BD23DE2C3B7068320EC3E66
+2025-10-16T16:08:19.122-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/refresh
+2025-10-16T16:08:19.609-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /api/frontend/log
+2025-10-16T16:08:19.611-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-16T16:08:19.633-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/refresh
+2025-10-16T16:08:19.635-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-16T16:08:19.637-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-4] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D1E3E0678BD23DE2C3B7068320EC3E66
+2025-10-16T16:08:19.637-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/refresh
+2025-10-16T16:08:19.645-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/logout
+2025-10-16T16:08:19.652-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/logout
+2025-10-16T16:08:19.653-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-16T16:08:19.654-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-6] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id D1E3E0678BD23DE2C3B7068320EC3E66
+2025-10-16T16:08:19.654-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/logout
+2025-10-16T16:08:33.552-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /api/planner?goal=designing%20a%20race%20car
+2025-10-16T16:08:33.558-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-16T16:08:33.559-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /api/planner?goal=designing%20a%20race%20car
+2025-10-16T16:08:57.128-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /oauth2/authorization/google
+2025-10-16T16:08:57.174-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-8] o.s.s.web.DefaultRedirectStrategy        : Redirecting to https://accounts.google.com/o/oauth2/v2/auth?response_type=code&client_id=1082527571682-2lm7ku45vuq1baaouake6eqkq1cai7rh.apps.googleusercontent.com&scope=openid%20profile%20email&state=ibc7vzb4HFe92ckv5aX92ZgX4Qy9pIQiExcSPdrP0Ns%3D&redirect_uri=http://localhost:8080/login/oauth2/code/google&nonce=u0qBiIi_dSFHpNNCSOVs9ZMDjmsRcV71PuabL9SlIb8
+2025-10-16T16:09:05.322-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /login/oauth2/code/google?state=ibc7vzb4HFe92ckv5aX92ZgX4Qy9pIQiExcSPdrP0Ns%3D&code=4%2F0AVGzR1Co5RxW9nRKN8-4YD3vPtOJ6o4qSU1kcgjSvQvYxFP2VfGB0t28RyI-bVm-82_A4Q&scope=email+profile+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&authuser=0&prompt=none
+2025-10-16T16:09:06.313-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-9] .s.ChangeSessionIdAuthenticationStrategy : Changed session id from 356A6C2D6BF2E47E63372F19AC88F26E
+2025-10-16T16:09:06.313-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-9] .s.o.c.w.OAuth2LoginAuthenticationFilter : Set SecurityContextHolder to OAuth2AuthenticationToken [Principal=Name: [117920362650877219075], Granted Authorities: [[OIDC_USER, SCOPE_https://www.googleapis.com/auth/userinfo.email, SCOPE_https://www.googleapis.com/auth/userinfo.profile, SCOPE_openid]], User Attributes: [{at_hash=tpofw8Ea9PTcFQBekaMZvQ, sub=117920362650877219075, email_verified=true, iss=https://accounts.google.com, given_name=Farid, nonce=u0qBiIi_dSFHpNNCSOVs9ZMDjmsRcV71PuabL9SlIb8, picture=https://lh3.googleusercontent.com/a/ACg8ocKSZixPFTnyZgWdGRbQof_fIt9rx9akppKvZb3i4L23_vkO3ufE=s96-c, aud=[1082527571682-2lm7ku45vuq1baaouake6eqkq1cai7rh.apps.googleusercontent.com], azp=1082527571682-2lm7ku45vuq1baaouake6eqkq1cai7rh.apps.googleusercontent.com, name=Farid Marandi, exp=2025-10-16T21:09:05Z, family_name=Marandi, iat=2025-10-16T20:09:05Z, email=farid.marandi@gmail.com}], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=356A6C2D6BF2E47E63372F19AC88F26E], Granted Authorities=[OIDC_USER, SCOPE_https://www.googleapis.com/auth/userinfo.email, SCOPE_https://www.googleapis.com/auth/userinfo.profile, SCOPE_openid]]
+2025-10-16T16:09:07.049-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/userprofile
+2025-10-16T16:09:07.054-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/userprofile
+2025-10-16T16:09:07.246-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /api/userprofile
+2025-10-16T16:09:17.524-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/logout
+2025-10-16T16:09:17.529-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/logout
+2025-10-16T16:09:17.623-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-3] .s.ChangeSessionIdAuthenticationStrategy : Changed session id from C4E051651ECB7315A9CD050A39AC77D2
+2025-10-16T16:09:17.623-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/logout
+2025-10-16T16:09:21.220-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /oauth2/authorization/google
+2025-10-16T16:09:21.222-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-4] o.s.s.web.DefaultRedirectStrategy        : Redirecting to https://accounts.google.com/o/oauth2/v2/auth?response_type=code&client_id=1082527571682-2lm7ku45vuq1baaouake6eqkq1cai7rh.apps.googleusercontent.com&scope=openid%20profile%20email&state=NCPDdYBP2s2t0DFxz-7G2a5h5u2sw_Zil34SzOPGJew%3D&redirect_uri=http://localhost:8080/login/oauth2/code/google&nonce=H638mo_Wp2oqpiNFF7JqNq1tTzNVH1YwhoahbV8PokY
+2025-10-16T16:09:25.239-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /login/oauth2/code/google?state=NCPDdYBP2s2t0DFxz-7G2a5h5u2sw_Zil34SzOPGJew%3D&code=4%2F0AVGzR1Dx6yzheT6E0FWhbDMomc1tTj4BJ53umWg7q56rFFfUQv0QR0IAYojEGrS63I_5RA&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=1&hd=profitsmoothies.com&prompt=none
+2025-10-16T16:09:25.759-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-5] .s.ChangeSessionIdAuthenticationStrategy : Changed session id from 64566BADE122ADDB20100F05CA7FE2D6
+2025-10-16T16:09:25.759-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-5] .s.o.c.w.OAuth2LoginAuthenticationFilter : Set SecurityContextHolder to OAuth2AuthenticationToken [Principal=Name: [110534465410343700587], Granted Authorities: [[OIDC_USER, SCOPE_https://www.googleapis.com/auth/userinfo.email, SCOPE_https://www.googleapis.com/auth/userinfo.profile, SCOPE_openid]], User Attributes: [{at_hash=rndxDZKqMtdpptXHsLofoA, sub=110534465410343700587, email_verified=true, iss=https://accounts.google.com, given_name=Farid, nonce=H638mo_Wp2oqpiNFF7JqNq1tTzNVH1YwhoahbV8PokY, picture=https://lh3.googleusercontent.com/a/ACg8ocLYX3GK262MhIkpkmf7XWdRu0xGRYnmJQgvUTYz9Kqb1y4shg=s96-c, aud=[1082527571682-2lm7ku45vuq1baaouake6eqkq1cai7rh.apps.googleusercontent.com], azp=1082527571682-2lm7ku45vuq1baaouake6eqkq1cai7rh.apps.googleusercontent.com, name=Farid MARANDI, hd=profitsmoothies.com, exp=2025-10-16T21:09:24Z, family_name=MARANDI, iat=2025-10-16T20:09:24Z, email=farid@profitsmoothies.com}], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=64566BADE122ADDB20100F05CA7FE2D6], Granted Authorities=[OIDC_USER, SCOPE_https://www.googleapis.com/auth/userinfo.email, SCOPE_https://www.googleapis.com/auth/userinfo.profile, SCOPE_openid]]
+2025-10-16T16:09:25.914-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/userprofile
+2025-10-16T16:09:25.919-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /api/userprofile
+2025-10-16T16:09:25.961-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /api/userprofile
+2025-10-16T16:09:36.711-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/update
+2025-10-16T16:09:36.714-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing POST /api/update
+2025-10-16T16:09:36.765-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured POST /api/update
+2025-10-16T16:09:39.371-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/userprofile
+2025-10-16T16:09:39.379-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/userprofile
+2025-10-16T16:09:39.433-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /api/userprofile
+2025-10-16T16:09:54.946-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /api/planner?goal=designing%20a%20race%20car
+2025-10-16T16:09:54.948-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-16T16:09:54.949-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /api/planner?goal=designing%20a%20race%20car
+2025-10-16T16:10:14.029-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/update
+2025-10-16T16:10:14.032-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /api/update
+2025-10-16T16:10:14.071-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /api/update
+2025-10-16T16:11:14.343-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/notification
+2025-10-16T16:11:14.347-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing POST /api/notification
+2025-10-16T16:11:14.385-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured POST /api/notification
+2025-10-16T16:12:14.347-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/notification
+2025-10-16T16:12:14.352-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /api/notification
+2025-10-16T16:12:14.383-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /api/notification
+2025-10-16T16:13:14.343-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/notification
+2025-10-16T16:13:14.347-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/notification
+2025-10-16T16:13:14.382-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /api/notification
+2025-10-16T16:14:14.335-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/notification
+2025-10-16T16:14:14.339-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /api/notification
+2025-10-16T16:14:14.370-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /api/notification
+2025-10-16T16:17:44.363-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/notification
+2025-10-16T16:17:44.371-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /api/notification
+2025-10-16T16:17:44.451-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured POST /api/notification
+2025-10-16T16:17:45.734-04:00  WARN 11384 --- [move] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m47s814ms200µs600ns).
+2025-10-16T16:17:46.404-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/refresh
+2025-10-16T16:17:46.411-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/refresh
+2025-10-16T16:17:46.412-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-16T16:17:46.413-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/refresh
+2025-10-16T16:17:47.023-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/userprofile
+2025-10-16T16:17:47.030-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /api/userprofile
+2025-10-16T16:17:47.071-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /api/userprofile
+2025-10-16T16:18:47.351-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/notification
+2025-10-16T16:18:47.356-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /api/notification
+2025-10-16T16:18:47.396-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured POST /api/notification
+2025-10-16T16:19:47.356-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/notification
+2025-10-16T16:19:47.370-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /api/notification
+2025-10-16T16:19:47.405-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured POST /api/notification
+2025-10-16T16:20:47.338-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/notification
+2025-10-16T16:20:47.344-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /api/notification
+2025-10-16T16:20:47.378-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured POST /api/notification
+2025-10-16T16:21:47.339-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/notification
+2025-10-16T16:21:47.344-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /api/notification
+2025-10-16T16:21:47.378-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /api/notification
+2025-10-16T16:22:47.351-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/notification
+2025-10-16T16:22:47.357-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/notification
+2025-10-16T16:22:47.393-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /api/notification
+2025-10-16T16:23:47.340-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/notification
+2025-10-16T16:23:47.342-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /api/notification
+2025-10-16T16:23:47.370-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured POST /api/notification
+2025-10-16T16:25:40.360-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/notification
+2025-10-16T16:25:40.366-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing POST /api/notification
+2025-10-16T16:25:40.397-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured POST /api/notification
+2025-10-16T16:26:15.119-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/notification
+2025-10-16T16:26:15.128-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /api/notification
+2025-10-16T16:26:15.167-04:00 DEBUG 11384 --- [move] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /api/notification

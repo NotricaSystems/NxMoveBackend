@@ -98,7 +98,7 @@ public class ChatGptService {
                 ". Begin by checking in with the user, ask how they’re progressing with the task or how they’re doing on their goal. " +
                 "Limit your message to around 4 sentences (less than 100 characters). " +
                 "The tone must be " + intensity[goal.getIntensity()] + " and prevent cliches at all costs. " +
-                "The text shouldn't have any format, just plain text. " +
+                "The text shouldn't have any format, just plain text. Avoid emojis entirely. " +
                 "Do not use bad word that might go against carriers like Twilio guidelines. ");
 
         if (timeIsUp) {
@@ -107,7 +107,7 @@ public class ChatGptService {
         }
 
         if (!prevNotifications.isEmpty()) {
-            prompt.append("Please do not use any sentence from your previous responses, these are some of your previous responses: ");
+            prompt.append("Please ensure your response is completely different from any of the previous ones listed below: ");
             for (Notifications notif: prevNotifications) {
                 prompt.append("\"").append(notif.getNotification()).append("\",");
             }
