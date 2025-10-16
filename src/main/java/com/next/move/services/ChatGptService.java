@@ -97,9 +97,14 @@ public class ChatGptService {
                 ". You have agreed to send encouraging, follow ups or reminding messages every " + notificationFreq(goal) +
                 ". Begin by checking in with the user, ask how they’re progressing with the task or how they’re doing on their goal. " +
                 "Limit your message to around 4 sentences (less than 100 characters). " +
-                "The tone must be " + intensity[goal.getIntensity()] + " and prevent cliches at all costs " +
+                "The tone must be " + intensity[goal.getIntensity()] + " and prevent cliches at all costs. " +
                 "The text shouldn't have any format, just plain text. " +
                 "Do not use bad word that might go against carriers like Twilio guidelines. ");
+
+        if (timeIsUp) {
+            prompt.append("Please notify the user that the time is up and encourage them to give " +
+                    "their best effort to achieve the goal or complete the routine.");
+        }
 
         if (!prevNotifications.isEmpty()) {
             prompt.append("Please do not use any sentence from your previous responses, these are some of your previous responses: ");
@@ -119,8 +124,9 @@ public class ChatGptService {
                 ". You have agreed to send encouraging or reminding messages every " + notificationFreq(goal) +
                 " The person has now replied to your last message, and it is: \"" + usersMessage +
                 "\". In your response, directly acknowledge their reply and continue the conversation naturally. " +
-                "If their reply shows struggles, doubts, or excuses, motivate them to take action and highlight " +
-                " something like there is always time, solutions exist, priorities matter, and excuses hold them back " +
+                "If their reply shows struggles, doubts, or excuses, motivate them to take action and provide them " +
+                "with practical, goal-focused tips to help them move forward. Highlight " +
+                "something like there is always time, solutions exist, priorities matter, and excuses hold them back " +
                 "(choose the most fitting point, not all). " +
                 "If their reply is positive and shows progress, reinforce their momentum, " +
                 "celebrate their wins, and encourage them to keep going strong. " +

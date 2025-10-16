@@ -1,204 +1,214 @@
-2025-10-11T12:51:42.503-04:00  INFO 23568 --- [move] [main] com.next.move.MoveApplication            : Starting MoveApplication using Java 24.0.1 with PID 23568 (C:\Users\arash\OneDrive\Desktop\Next Move\move2\target\classes started by arash in C:\Users\arash\OneDrive\Desktop\Next Move\move2)
-2025-10-11T12:51:42.523-04:00 DEBUG 23568 --- [move] [main] com.next.move.MoveApplication            : Running with Spring Boot v3.5.4, Spring v6.2.9
-2025-10-11T12:51:42.525-04:00  INFO 23568 --- [move] [main] com.next.move.MoveApplication            : The following 1 profile is active: "dev"
-2025-10-11T12:51:50.599-04:00  WARN 23568 --- [move] [main] org.hibernate.orm.deprecation            : HHH90000025: SQLServerDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-10-11T12:51:56.523-04:00  INFO 23568 --- [move] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
-2025-10-11T12:52:00.165-04:00  WARN 23568 --- [move] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-10-11T12:52:01.015-04:00 DEBUG 23568 --- [move] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, OAuth2AuthorizationRequestRedirectFilter, OAuth2LoginAuthenticationFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
-2025-10-11T12:52:01.966-04:00  INFO 23568 --- [move] [main] com.next.move.MoveApplication            : Started MoveApplication in 20.758 seconds (process running for 21.753)
-2025-10-11T12:52:19.652-04:00 DEBUG 23568 --- [move] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/refresh
-2025-10-11T12:52:19.690-04:00 DEBUG 23568 --- [move] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/refresh
-2025-10-11T12:52:19.698-04:00 DEBUG 23568 --- [move] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-11T12:52:19.700-04:00 DEBUG 23568 --- [move] [http-nio-8080-exec-3] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 22CFD6A5DD234AEE17A237C62411AF9F
-2025-10-11T12:52:19.705-04:00 DEBUG 23568 --- [move] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/refresh
-2025-10-11T12:52:20.388-04:00 DEBUG 23568 --- [move] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/userprofile
-2025-10-11T12:52:20.395-04:00 DEBUG 23568 --- [move] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /api/userprofile
-2025-10-11T12:52:20.582-04:00 DEBUG 23568 --- [move] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /api/userprofile
-2025-10-11T12:52:36.094-04:00 DEBUG 23568 --- [move] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/logout
-2025-10-11T12:52:36.100-04:00 DEBUG 23568 --- [move] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/logout
-2025-10-11T12:52:36.178-04:00 DEBUG 23568 --- [move] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/logout
-2025-10-11T12:52:40.314-04:00 DEBUG 23568 --- [move] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/refresh
-2025-10-11T12:52:40.319-04:00 DEBUG 23568 --- [move] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/refresh
-2025-10-11T12:52:40.321-04:00 DEBUG 23568 --- [move] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-11T12:52:40.321-04:00 DEBUG 23568 --- [move] [http-nio-8080-exec-1] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 22CFD6A5DD234AEE17A237C62411AF9F
-2025-10-11T12:52:40.321-04:00 DEBUG 23568 --- [move] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/refresh
-2025-10-11T12:52:40.355-04:00 DEBUG 23568 --- [move] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/frontend/log
-2025-10-11T12:52:40.355-04:00 DEBUG 23568 --- [move] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-11T12:52:40.479-04:00 DEBUG 23568 --- [move] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/refresh
-2025-10-11T12:52:40.483-04:00 DEBUG 23568 --- [move] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-11T12:52:40.483-04:00 DEBUG 23568 --- [move] [http-nio-8080-exec-3] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 22CFD6A5DD234AEE17A237C62411AF9F
-2025-10-11T12:52:40.485-04:00 DEBUG 23568 --- [move] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/refresh
-2025-10-11T12:52:40.507-04:00 DEBUG 23568 --- [move] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/logout
-2025-10-11T12:52:40.515-04:00 DEBUG 23568 --- [move] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-11T12:52:40.516-04:00 DEBUG 23568 --- [move] [http-nio-8080-exec-4] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 22CFD6A5DD234AEE17A237C62411AF9F
-2025-10-11T12:52:40.517-04:00 DEBUG 23568 --- [move] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/logout
-2025-10-11T12:52:43.180-04:00 DEBUG 23568 --- [move] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/refresh
-2025-10-11T12:52:43.182-04:00 DEBUG 23568 --- [move] [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-11T12:52:43.182-04:00 DEBUG 23568 --- [move] [http-nio-8080-exec-7] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 22CFD6A5DD234AEE17A237C62411AF9F
-2025-10-11T12:52:43.182-04:00 DEBUG 23568 --- [move] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/refresh
-2025-10-11T12:52:43.214-04:00 DEBUG 23568 --- [move] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /api/frontend/log
-2025-10-11T12:52:43.217-04:00 DEBUG 23568 --- [move] [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-11T12:52:43.318-04:00 DEBUG 23568 --- [move] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/refresh
-2025-10-11T12:52:43.318-04:00 DEBUG 23568 --- [move] [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-11T12:52:43.320-04:00 DEBUG 23568 --- [move] [http-nio-8080-exec-9] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 22CFD6A5DD234AEE17A237C62411AF9F
-2025-10-11T12:52:43.320-04:00 DEBUG 23568 --- [move] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/refresh
-2025-10-11T12:52:43.339-04:00 DEBUG 23568 --- [move] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/logout
-2025-10-11T12:52:43.345-04:00 DEBUG 23568 --- [move] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/logout
-2025-10-11T12:52:43.347-04:00 DEBUG 23568 --- [move] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-11T12:52:43.348-04:00 DEBUG 23568 --- [move] [http-nio-8080-exec-1] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 22CFD6A5DD234AEE17A237C62411AF9F
-2025-10-11T12:52:43.348-04:00 DEBUG 23568 --- [move] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/logout
-2025-10-11T15:33:11.331-04:00  INFO 36944 --- [move] [main] com.next.move.MoveApplication            : Starting MoveApplication using Java 24.0.1 with PID 36944 (C:\Users\arash\OneDrive\Desktop\Next Move\move2\target\classes started by arash in C:\Users\arash\OneDrive\Desktop\Next Move\move2)
-2025-10-11T15:33:11.335-04:00 DEBUG 36944 --- [move] [main] com.next.move.MoveApplication            : Running with Spring Boot v3.5.4, Spring v6.2.9
-2025-10-11T15:33:11.336-04:00  INFO 36944 --- [move] [main] com.next.move.MoveApplication            : The following 1 profile is active: "dev"
-2025-10-11T15:33:19.907-04:00  WARN 36944 --- [move] [main] org.hibernate.orm.deprecation            : HHH90000025: SQLServerDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-10-11T15:33:25.929-04:00  INFO 36944 --- [move] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
-2025-10-11T15:33:29.693-04:00  WARN 36944 --- [move] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-10-11T15:33:30.473-04:00 DEBUG 36944 --- [move] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, OAuth2AuthorizationRequestRedirectFilter, OAuth2LoginAuthenticationFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
-2025-10-11T15:33:31.320-04:00  INFO 36944 --- [move] [main] com.next.move.MoveApplication            : Started MoveApplication in 21.295 seconds (process running for 22.459)
-2025-10-11T15:33:44.544-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /oauth2/authorization/google
-2025-10-11T15:33:44.596-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-1] o.s.s.web.DefaultRedirectStrategy        : Redirecting to https://accounts.google.com/o/oauth2/v2/auth?response_type=code&client_id=1082527571682-2lm7ku45vuq1baaouake6eqkq1cai7rh.apps.googleusercontent.com&scope=openid%20profile%20email&state=Ez8ttEmAY-jkrW7N2qH6lueIpWKILtfgMLMTnTKe8Ak%3D&redirect_uri=http://localhost:8080/login/oauth2/code/google&nonce=h--6ZLF3HMexaiXxBx7uQoyg7nPfVXDjNSghqrTeuF4
-2025-10-11T15:33:48.200-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /login/oauth2/code/google?state=Ez8ttEmAY-jkrW7N2qH6lueIpWKILtfgMLMTnTKe8Ak%3D&code=4%2F0AVGzR1AZP62V0YV7fUfs9boH9uMk0zZHv81ed5YYe9F1Deg_QwfX2S0v_o0Bjxf_Bz1k7w&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&authuser=1&hd=profitsmoothies.com&prompt=none
-2025-10-11T15:33:49.248-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-2] .s.ChangeSessionIdAuthenticationStrategy : Changed session id from 604CECBE0DC7CB7018CCED3269611483
-2025-10-11T15:33:49.250-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-2] .s.o.c.w.OAuth2LoginAuthenticationFilter : Set SecurityContextHolder to OAuth2AuthenticationToken [Principal=Name: [110534465410343700587], Granted Authorities: [[OIDC_USER, SCOPE_https://www.googleapis.com/auth/userinfo.email, SCOPE_https://www.googleapis.com/auth/userinfo.profile, SCOPE_openid]], User Attributes: [{at_hash=kpCRx-juv-yUqJ487qG5Gw, sub=110534465410343700587, email_verified=true, iss=https://accounts.google.com, given_name=Farid, nonce=h--6ZLF3HMexaiXxBx7uQoyg7nPfVXDjNSghqrTeuF4, picture=https://lh3.googleusercontent.com/a/ACg8ocLYX3GK262MhIkpkmf7XWdRu0xGRYnmJQgvUTYz9Kqb1y4shg=s96-c, aud=[1082527571682-2lm7ku45vuq1baaouake6eqkq1cai7rh.apps.googleusercontent.com], azp=1082527571682-2lm7ku45vuq1baaouake6eqkq1cai7rh.apps.googleusercontent.com, name=Farid MARANDI, hd=profitsmoothies.com, exp=2025-10-11T20:33:47Z, family_name=MARANDI, iat=2025-10-11T19:33:47Z, email=farid@profitsmoothies.com}], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=604CECBE0DC7CB7018CCED3269611483], Granted Authorities=[OIDC_USER, SCOPE_https://www.googleapis.com/auth/userinfo.email, SCOPE_https://www.googleapis.com/auth/userinfo.profile, SCOPE_openid]]
-2025-10-11T15:33:49.894-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/userprofile
-2025-10-11T15:33:49.910-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /api/userprofile
-2025-10-11T15:33:50.055-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /api/userprofile
-2025-10-11T15:34:14.410-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /api/planner?goal=building%20a%20house%20in%20a%20year%20in%20Toronto
-2025-10-11T15:34:14.412-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-11T15:34:14.413-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /api/planner?goal=building%20a%20house%20in%20a%20year%20in%20Toronto
-2025-10-11T15:34:25.220-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/update
-2025-10-11T15:34:25.227-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /api/update
-2025-10-11T15:34:25.303-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured POST /api/update
-2025-10-11T15:35:25.566-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/notification
-2025-10-11T15:35:25.575-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /api/notification
-2025-10-11T15:35:25.630-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /api/notification
-2025-10-11T15:36:25.552-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/notification
-2025-10-11T15:36:25.558-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /api/notification
-2025-10-11T15:36:25.609-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /api/notification
-2025-10-11T15:37:25.551-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/notification
-2025-10-11T15:37:25.558-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /api/notification
-2025-10-11T15:37:25.622-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /api/notification
-2025-10-11T15:38:25.950-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/notification
-2025-10-11T15:38:25.957-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /api/notification
-2025-10-11T15:38:26.007-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured POST /api/notification
-2025-10-11T15:39:25.938-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/notification
-2025-10-11T15:39:25.947-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /api/notification
-2025-10-11T15:39:25.992-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /api/notification
-2025-10-11T15:39:37.115-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/logout
-2025-10-11T15:39:37.121-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/logout
-2025-10-11T15:39:37.164-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-3] .s.ChangeSessionIdAuthenticationStrategy : Changed session id from 2413388F9B8A6EEC354E895E103F67BB
-2025-10-11T15:39:37.165-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/logout
-2025-10-11T15:40:25.552-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/notification
-2025-10-11T15:40:25.555-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /api/notification
-2025-10-11T15:40:25.559-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-11T15:40:25.576-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/refresh
-2025-10-11T15:40:25.581-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/refresh
-2025-10-11T15:40:25.585-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-11T15:40:25.586-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/refresh
-2025-10-11T15:40:25.603-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/logout
-2025-10-11T15:40:25.606-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing POST /api/frontend/log
-2025-10-11T15:40:25.607-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-11T15:40:25.615-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/logout
-2025-10-11T15:40:25.619-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-11T15:40:25.620-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/logout
-2025-10-11T15:40:25.622-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/refresh
-2025-10-11T15:40:25.623-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-11T15:40:25.623-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/refresh
-2025-10-11T15:40:25.637-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/logout
-2025-10-11T15:40:25.639-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-11T15:40:25.639-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/logout
-2025-10-11T15:41:25.546-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/notification
-2025-10-11T15:41:25.555-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /api/notification
-2025-10-11T15:41:25.555-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-11T15:41:25.566-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/refresh
-2025-10-11T15:41:25.573-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/refresh
-2025-10-11T15:41:25.575-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-11T15:41:25.576-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/refresh
-2025-10-11T15:41:25.588-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/logout
-2025-10-11T15:41:25.590-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /api/frontend/log
-2025-10-11T15:41:25.592-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-11T15:41:25.595-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/logout
-2025-10-11T15:41:25.596-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-11T15:41:25.596-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/logout
-2025-10-11T15:41:25.600-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/refresh
-2025-10-11T15:41:25.603-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-11T15:41:25.603-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/refresh
-2025-10-11T15:41:25.616-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/logout
-2025-10-11T15:41:25.617-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-11T15:41:25.617-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/logout
-2025-10-11T15:42:25.560-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/notification
-2025-10-11T15:42:25.566-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /api/notification
-2025-10-11T15:42:25.568-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-11T15:42:25.577-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/refresh
-2025-10-11T15:42:25.583-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/refresh
-2025-10-11T15:42:25.585-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-11T15:42:25.586-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/refresh
-2025-10-11T15:42:25.596-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/logout
-2025-10-11T15:42:25.597-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /api/frontend/log
-2025-10-11T15:42:25.597-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-11T15:42:25.601-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/logout
-2025-10-11T15:42:25.601-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-11T15:42:25.603-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/logout
-2025-10-11T15:42:25.611-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/refresh
-2025-10-11T15:42:25.612-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-11T15:42:25.612-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/refresh
-2025-10-11T15:42:25.620-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/logout
-2025-10-11T15:42:25.620-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-11T15:42:25.625-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/logout
-2025-10-11T15:43:25.552-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/notification
-2025-10-11T15:43:25.557-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /api/notification
-2025-10-11T15:43:25.559-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-11T15:43:25.566-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/refresh
-2025-10-11T15:43:25.574-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/refresh
-2025-10-11T15:43:25.575-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-11T15:43:25.576-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/refresh
-2025-10-11T15:43:25.588-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/logout
-2025-10-11T15:43:25.590-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /api/frontend/log
-2025-10-11T15:43:25.590-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-11T15:43:25.592-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/logout
-2025-10-11T15:43:25.596-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-11T15:43:25.597-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/logout
-2025-10-11T15:43:25.606-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/refresh
-2025-10-11T15:43:25.608-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-11T15:43:25.609-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/refresh
-2025-10-11T15:43:25.618-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/logout
-2025-10-11T15:43:25.621-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-11T15:43:25.621-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/logout
-2025-10-11T15:44:25.547-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/notification
-2025-10-11T15:44:25.551-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /api/notification
-2025-10-11T15:44:25.551-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-11T15:44:25.564-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/refresh
-2025-10-11T15:44:25.566-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/refresh
-2025-10-11T15:44:25.566-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-11T15:44:25.566-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/refresh
-2025-10-11T15:44:25.580-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/logout
-2025-10-11T15:44:25.582-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /api/frontend/log
-2025-10-11T15:44:25.582-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-11T15:44:25.585-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/logout
-2025-10-11T15:44:25.586-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-11T15:44:25.587-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/logout
-2025-10-11T15:44:25.595-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/refresh
-2025-10-11T15:44:25.597-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-11T15:44:25.597-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/refresh
-2025-10-11T15:44:25.609-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/logout
-2025-10-11T15:44:25.609-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-11T15:44:25.609-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/logout
-2025-10-11T15:45:25.937-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/notification
-2025-10-11T15:45:25.942-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /api/notification
-2025-10-11T15:45:25.943-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-11T15:45:25.956-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/refresh
-2025-10-11T15:45:25.959-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/refresh
-2025-10-11T15:45:25.961-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-11T15:45:25.962-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/refresh
-2025-10-11T15:45:25.969-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/logout
-2025-10-11T15:45:25.977-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /api/frontend/log
-2025-10-11T15:45:25.977-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-11T15:45:25.977-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/logout
-2025-10-11T15:45:25.977-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-11T15:45:25.977-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/logout
-2025-10-11T15:45:25.989-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/refresh
-2025-10-11T15:45:25.991-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-11T15:45:25.991-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/refresh
-2025-10-11T15:45:26.003-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/logout
-2025-10-11T15:45:26.003-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-11T15:45:26.005-04:00 DEBUG 36944 --- [move] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/logout
+2025-10-16T07:01:20.639-04:00  WARN 29128 --- [move] [scheduling-1] o.s.a.r.a.SpringAiRetryAutoConfiguration : Retry error. Retry count: 1, Exception: I/O error on POST request for "https://api.openai.com/v1/chat/completions": null
+
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "https://api.openai.com/v1/chat/completions": null
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.createResourceAccessException(DefaultRestClient.java:704) ~[spring-web-6.2.9.jar:6.2.9]
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:589) ~[spring-web-6.2.9.jar:6.2.9]
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchange(DefaultRestClient.java:540) ~[spring-web-6.2.9.jar:6.2.9]
+	at org.springframework.web.client.RestClient$RequestHeadersSpec.exchange(RestClient.java:680) ~[spring-web-6.2.9.jar:6.2.9]
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.executeAndExtract(DefaultRestClient.java:821) ~[spring-web-6.2.9.jar:6.2.9]
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toEntityInternal(DefaultRestClient.java:781) ~[spring-web-6.2.9.jar:6.2.9]
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toEntity(DefaultRestClient.java:770) ~[spring-web-6.2.9.jar:6.2.9]
+	at org.springframework.ai.openai.api.OpenAiApi.chatCompletionEntity(OpenAiApi.java:198) ~[spring-ai-openai-1.0.1.jar:1.0.1]
+	at org.springframework.ai.openai.OpenAiChatModel.lambda$internalCall$1(OpenAiChatModel.java:199) ~[spring-ai-openai-1.0.1.jar:1.0.1]
+	at org.springframework.retry.support.RetryTemplate.doExecute(RetryTemplate.java:357) ~[spring-retry-2.0.12.jar:na]
+	at org.springframework.retry.support.RetryTemplate.execute(RetryTemplate.java:230) ~[spring-retry-2.0.12.jar:na]
+	at org.springframework.ai.openai.OpenAiChatModel.lambda$internalCall$3(OpenAiChatModel.java:199) ~[spring-ai-openai-1.0.1.jar:1.0.1]
+	at io.micrometer.observation.Observation.observe(Observation.java:564) ~[micrometer-observation-1.15.2.jar:1.15.2]
+	at org.springframework.ai.openai.OpenAiChatModel.internalCall(OpenAiChatModel.java:196) ~[spring-ai-openai-1.0.1.jar:1.0.1]
+	at org.springframework.ai.openai.OpenAiChatModel.call(OpenAiChatModel.java:181) ~[spring-ai-openai-1.0.1.jar:1.0.1]
+	at org.springframework.ai.chat.client.advisor.ChatModelCallAdvisor.adviseCall(ChatModelCallAdvisor.java:54) ~[spring-ai-client-chat-1.0.1.jar:1.0.1]
+	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.lambda$nextCall$1(DefaultAroundAdvisorChain.java:110) ~[spring-ai-client-chat-1.0.1.jar:1.0.1]
+	at io.micrometer.observation.Observation.observe(Observation.java:564) ~[micrometer-observation-1.15.2.jar:1.15.2]
+	at org.springframework.ai.chat.client.advisor.DefaultAroundAdvisorChain.nextCall(DefaultAroundAdvisorChain.java:110) ~[spring-ai-client-chat-1.0.1.jar:1.0.1]
+	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.lambda$doGetObservableChatClientResponse$1(DefaultChatClient.java:470) ~[spring-ai-client-chat-1.0.1.jar:1.0.1]
+	at io.micrometer.observation.Observation.observe(Observation.java:564) ~[micrometer-observation-1.15.2.jar:1.15.2]
+	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.doGetObservableChatClientResponse(DefaultChatClient.java:468) ~[spring-ai-client-chat-1.0.1.jar:1.0.1]
+	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.doGetObservableChatClientResponse(DefaultChatClient.java:447) ~[spring-ai-client-chat-1.0.1.jar:1.0.1]
+	at org.springframework.ai.chat.client.DefaultChatClient$DefaultCallResponseSpec.content(DefaultChatClient.java:442) ~[spring-ai-client-chat-1.0.1.jar:1.0.1]
+	at com.next.move.services.ChatGptService.askChatGpt(ChatGptService.java:49) ~[classes/:na]
+	at com.next.move.services.ChatGptService.aiNotifGenerator(ChatGptService.java:112) ~[classes/:na]
+	at com.next.move.services.NotifierService.notifier(NotifierService.java:79) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.runInternal(ScheduledMethodRunnable.java:130) ~[spring-context-6.2.9.jar:6.2.9]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.lambda$run$2(ScheduledMethodRunnable.java:124) ~[spring-context-6.2.9.jar:6.2.9]
+	at io.micrometer.observation.Observation.observe(Observation.java:498) ~[micrometer-observation-1.15.2.jar:1.15.2]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:124) ~[spring-context-6.2.9.jar:6.2.9]
+	at org.springframework.scheduling.config.Task$OutcomeTrackingRunnable.run(Task.java:85) ~[spring-context-6.2.9.jar:6.2.9]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-6.2.9.jar:6.2.9]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:369) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:310) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1095) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:619) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1447) ~[na:na]
+Caused by: java.net.ConnectException: null
+	at java.net.http/jdk.internal.net.http.common.Utils.toConnectException(Utils.java:1046) ~[java.net.http:na]
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:215) ~[java.net.http:na]
+	at java.net.http/jdk.internal.net.http.AsyncSSLConnection.connectAsync(AsyncSSLConnection.java:56) ~[java.net.http:na]
+	at java.net.http/jdk.internal.net.http.Http2Connection.createAsync(Http2Connection.java:536) ~[java.net.http:na]
+	at java.net.http/jdk.internal.net.http.Http2ClientImpl.getConnectionFor(Http2ClientImpl.java:140) ~[java.net.http:na]
+	at java.net.http/jdk.internal.net.http.ExchangeImpl.get(ExchangeImpl.java:108) ~[java.net.http:na]
+	at java.net.http/jdk.internal.net.http.Exchange.establishExchange(Exchange.java:356) ~[java.net.http:na]
+	at java.net.http/jdk.internal.net.http.Exchange.responseAsyncImpl(Exchange.java:562) ~[java.net.http:na]
+	at java.net.http/jdk.internal.net.http.Exchange.responseAsync(Exchange.java:385) ~[java.net.http:na]
+	at java.net.http/jdk.internal.net.http.MultiExchange.responseAsyncImpl(MultiExchange.java:437) ~[java.net.http:na]
+	at java.net.http/jdk.internal.net.http.MultiExchange.lambda$responseAsyncImpl$2(MultiExchange.java:479) ~[java.net.http:na]
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:980) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture.uniHandleStage(CompletableFuture.java:996) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture.handle(CompletableFuture.java:2424) ~[na:na]
+	at java.net.http/jdk.internal.net.http.MultiExchange.responseAsyncImpl(MultiExchange.java:469) ~[java.net.http:na]
+	at java.net.http/jdk.internal.net.http.MultiExchange.lambda$responseAsync0$0(MultiExchange.java:357) ~[java.net.http:na]
+	at java.base/java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:1196) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:556) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1819) ~[na:na]
+	... 3 common frames omitted
+Caused by: java.nio.channels.UnresolvedAddressException: null
+	at java.base/sun.nio.ch.Net.checkAddress(Net.java:135) ~[na:na]
+	at java.base/sun.nio.ch.Net.checkAddress(Net.java:143) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.checkRemote(SocketChannelImpl.java:918) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:936) ~[na:na]
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:203) ~[java.net.http:na]
+	... 20 common frames omitted
+
+2025-10-16T07:01:20.670-04:00 ERROR 29128 --- [move] [scheduling-1] c.next.move.controllers.HubController    : I/O error on POST request for "https://api.openai.com/v1/chat/completions": null
+2025-10-16T07:01:30.909-04:00  WARN 29128 --- [move] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7h6m17s733ms648µs500ns).
+2025-10-16T10:56:58.272-04:00  WARN 29128 --- [move] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3h40m48s124ms1µs700ns).
+2025-10-16T11:31:20.743-04:00  INFO 24100 --- [move] [main] com.next.move.MoveApplication            : Starting MoveApplication using Java 24.0.1 with PID 24100 (C:\Users\arash\OneDrive\Desktop\Next Move\move2\target\classes started by arash in C:\Users\arash\OneDrive\Desktop\Next Move\move2)
+2025-10-16T11:31:20.746-04:00 DEBUG 24100 --- [move] [main] com.next.move.MoveApplication            : Running with Spring Boot v3.5.4, Spring v6.2.9
+2025-10-16T11:31:20.747-04:00  INFO 24100 --- [move] [main] com.next.move.MoveApplication            : The following 1 profile is active: "dev"
+2025-10-16T11:31:26.829-04:00  WARN 24100 --- [move] [main] org.hibernate.orm.deprecation            : HHH90000025: SQLServerDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-16T11:31:31.288-04:00  INFO 24100 --- [move] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-10-16T11:31:34.229-04:00  WARN 24100 --- [move] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-16T11:31:34.910-04:00 DEBUG 24100 --- [move] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, OAuth2AuthorizationRequestRedirectFilter, OAuth2LoginAuthenticationFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-10-16T11:31:35.729-04:00  INFO 24100 --- [move] [main] com.next.move.MoveApplication            : Started MoveApplication in 15.978 seconds (process running for 17.056)
+2025-10-16T11:32:11.173-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/refresh
+2025-10-16T11:32:11.205-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/refresh
+2025-10-16T11:32:11.212-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-16T11:32:11.213-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-2] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 9B670211090468BE38AF5182530B3F75
+2025-10-16T11:32:11.217-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/refresh
+2025-10-16T11:32:11.797-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/userprofile
+2025-10-16T11:32:11.802-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /api/userprofile
+2025-10-16T11:32:12.010-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /api/userprofile
+2025-10-16T11:32:16.304-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/logout
+2025-10-16T11:32:16.304-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/logout
+2025-10-16T11:32:16.411-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/logout
+2025-10-16T11:32:19.045-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/refresh
+2025-10-16T11:32:19.050-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/refresh
+2025-10-16T11:32:19.052-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-16T11:32:19.052-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-8] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 9B670211090468BE38AF5182530B3F75
+2025-10-16T11:32:19.053-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/refresh
+2025-10-16T11:32:19.135-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing POST /api/frontend/log
+2025-10-16T11:32:19.137-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-16T11:32:19.229-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/refresh
+2025-10-16T11:32:19.232-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-16T11:32:19.232-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-10] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 9B670211090468BE38AF5182530B3F75
+2025-10-16T11:32:19.232-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/refresh
+2025-10-16T11:32:19.251-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/logout
+2025-10-16T11:32:19.253-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-16T11:32:19.254-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-1] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 9B670211090468BE38AF5182530B3F75
+2025-10-16T11:32:19.254-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/logout
+2025-10-16T11:33:08.553-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/refresh
+2025-10-16T11:33:08.559-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/refresh
+2025-10-16T11:33:08.561-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-16T11:33:08.563-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-3] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 9B670211090468BE38AF5182530B3F75
+2025-10-16T11:33:08.563-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/refresh
+2025-10-16T11:33:08.629-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /api/frontend/log
+2025-10-16T11:33:08.629-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-16T11:33:08.820-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/refresh
+2025-10-16T11:33:08.822-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-16T11:33:08.823-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-5] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 9B670211090468BE38AF5182530B3F75
+2025-10-16T11:33:08.823-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/refresh
+2025-10-16T11:33:08.839-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/logout
+2025-10-16T11:33:08.843-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/logout
+2025-10-16T11:33:08.846-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-16T11:33:08.846-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-7] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 9B670211090468BE38AF5182530B3F75
+2025-10-16T11:33:08.846-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/logout
+2025-10-16T11:35:15.564-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/refresh
+2025-10-16T11:35:15.564-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/refresh
+2025-10-16T11:35:15.564-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-16T11:35:15.564-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-1] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 9B670211090468BE38AF5182530B3F75
+2025-10-16T11:35:15.564-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/refresh
+2025-10-16T11:35:15.631-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/frontend/log
+2025-10-16T11:35:15.632-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-16T11:35:15.871-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/refresh
+2025-10-16T11:35:15.873-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-16T11:35:15.873-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-3] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 9B670211090468BE38AF5182530B3F75
+2025-10-16T11:35:15.873-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/refresh
+2025-10-16T11:35:15.880-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/logout
+2025-10-16T11:35:15.887-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/logout
+2025-10-16T11:35:15.887-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-16T11:35:15.893-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-5] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 9B670211090468BE38AF5182530B3F75
+2025-10-16T11:35:15.893-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/logout
+2025-10-16T11:35:23.591-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/refresh
+2025-10-16T11:35:23.595-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/refresh
+2025-10-16T11:35:23.596-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-16T11:35:23.596-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-7] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 9B670211090468BE38AF5182530B3F75
+2025-10-16T11:35:23.596-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/refresh
+2025-10-16T11:35:23.626-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing POST /api/frontend/log
+2025-10-16T11:35:23.629-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-16T11:35:23.702-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/refresh
+2025-10-16T11:35:23.702-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-16T11:35:23.702-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-8] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 9B670211090468BE38AF5182530B3F75
+2025-10-16T11:35:23.702-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/refresh
+2025-10-16T11:35:23.720-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/logout
+2025-10-16T11:35:23.728-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/logout
+2025-10-16T11:35:23.728-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-16T11:35:23.730-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-1] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 9B670211090468BE38AF5182530B3F75
+2025-10-16T11:35:23.730-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/logout
+2025-10-16T11:36:01.945-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/refresh
+2025-10-16T11:36:01.949-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/refresh
+2025-10-16T11:36:01.951-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-16T11:36:01.951-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-3] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 9B670211090468BE38AF5182530B3F75
+2025-10-16T11:36:01.952-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/refresh
+2025-10-16T11:36:01.978-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /api/frontend/log
+2025-10-16T11:36:01.978-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-16T11:36:02.066-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/refresh
+2025-10-16T11:36:02.066-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-16T11:36:02.069-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-5] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 9B670211090468BE38AF5182530B3F75
+2025-10-16T11:36:02.069-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/refresh
+2025-10-16T11:36:02.083-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/logout
+2025-10-16T11:36:02.083-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/logout
+2025-10-16T11:36:02.083-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-16T11:36:02.083-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-7] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 9B670211090468BE38AF5182530B3F75
+2025-10-16T11:36:02.083-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/logout
+2025-10-16T12:16:32.372-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/refresh
+2025-10-16T12:16:32.375-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/refresh
+2025-10-16T12:16:32.380-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-16T12:16:32.380-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-1] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 9B670211090468BE38AF5182530B3F75
+2025-10-16T12:16:32.380-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/refresh
+2025-10-16T12:16:32.463-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/frontend/log
+2025-10-16T12:16:32.465-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-16T12:17:22.905-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/refresh
+2025-10-16T12:17:22.937-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-16T12:17:22.937-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-5] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 9B670211090468BE38AF5182530B3F75
+2025-10-16T12:17:22.937-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/refresh
+2025-10-16T12:17:23.317-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/logout
+2025-10-16T12:17:23.328-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/logout
+2025-10-16T12:17:23.334-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-16T12:17:23.334-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-7] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 9B670211090468BE38AF5182530B3F75
+2025-10-16T12:17:23.336-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/logout
+2025-10-16T12:17:23.919-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/refresh
+2025-10-16T12:17:23.923-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/refresh
+2025-10-16T12:17:23.925-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-16T12:17:23.925-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-8] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 9B670211090468BE38AF5182530B3F75
+2025-10-16T12:17:23.926-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/refresh
+2025-10-16T12:17:24.370-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /api/frontend/log
+2025-10-16T12:17:24.387-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-16T12:17:24.516-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/refresh
+2025-10-16T12:17:24.518-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-16T12:17:24.520-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-1] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 9B670211090468BE38AF5182530B3F75
+2025-10-16T12:17:24.520-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/refresh
+2025-10-16T12:17:24.539-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/logout
+2025-10-16T12:17:24.541-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-16T12:17:24.542-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-2] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 9B670211090468BE38AF5182530B3F75
+2025-10-16T12:17:24.542-04:00 DEBUG 24100 --- [move] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/logout
+2025-10-16T12:17:25.715-04:00  WARN 24100 --- [move] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=36m28s772ms580µs).
+2025-10-16T13:08:48.476-04:00  INFO 28228 --- [move] [main] com.next.move.MoveApplication            : Starting MoveApplication using Java 24.0.1 with PID 28228 (C:\Users\arash\OneDrive\Desktop\Next Move\move2\target\classes started by arash in C:\Users\arash\OneDrive\Desktop\Next Move\move2)
+2025-10-16T13:08:48.479-04:00 DEBUG 28228 --- [move] [main] com.next.move.MoveApplication            : Running with Spring Boot v3.5.4, Spring v6.2.9
+2025-10-16T13:08:48.481-04:00  INFO 28228 --- [move] [main] com.next.move.MoveApplication            : The following 1 profile is active: "dev"
+2025-10-16T13:08:55.995-04:00  WARN 28228 --- [move] [main] org.hibernate.orm.deprecation            : HHH90000025: SQLServerDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-16T13:09:01.634-04:00  INFO 28228 --- [move] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-10-16T13:09:05.237-04:00  WARN 28228 --- [move] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-16T13:09:06.130-04:00 DEBUG 28228 --- [move] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, OAuth2AuthorizationRequestRedirectFilter, OAuth2LoginAuthenticationFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-10-16T13:09:07.063-04:00  INFO 28228 --- [move] [main] com.next.move.MoveApplication            : Started MoveApplication in 19.784 seconds (process running for 21.055)
