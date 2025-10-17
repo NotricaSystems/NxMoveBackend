@@ -100,7 +100,8 @@ public class HubController {
                 return (ResponseEntity<?>) ResponseEntity.ok();
             } else {
                 //Call a service to store the user's response and to generate an AI generated reply
-                return ResponseEntity.ok("Message: " + notifierService.replyBack(phone, body));
+                return ResponseEntity.ok(notifierService.replyBack(phone, body));
+                //return ResponseEntity.ok("Message: " + notifierService.replyBack(phone, body));
             }
         } catch (Exception e) {
             //Modify this later to return a ResponseEntity
