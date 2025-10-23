@@ -54,25 +54,29 @@ public class ConductorService {
         return userProfile;
     }
 
+    public Goals pauseTimer(Goals goal) {
+        long seconds = ChronoUnit.SECONDS.between(goal.getStartDate(), Instant.now());
+        goal.setRemainingSeconds(goal.getRemainingSeconds() - (int) seconds);
+        goal.setLastPausedDate(Instant.now());
+        goal.setStatus(GoalStatus.PAUSED.getCode());
+        return goal;
+    }
+
     @Transactional
     public UserProfile pauseGoal(UserProfile userProfile) {
-        for(Goals goal: userProfile.getGoalsList()) {
-            long seconds = ChronoUnit.SECONDS.between(goal.getStartDate(), Instant.now());
-            goal.setRemainingSeconds(goal.getRemainingSeconds() - (int) seconds);
-            goal.setLastPausedDate(Instant.now());
-            goal.setStatus(GoalStatus.PAUSED.getCode());
-            return updateUserProfile(userProfile);
-        }
-        return null;
+        userProfile.getGoalsList().set(0, pauseTimer(userProfile.getGoalsList().getFirst()));
+        return updateUserProfile(userProfile);
+    }
+
+    public Goals restartTimer(Goals goal) {
+        goal.setStartDate(Instant.now());
+        goal.setStatus(GoalStatus.STARTED.getCode());
+        return goal;
     }
 
     @Transactional
     public UserProfile restartGoal(UserProfile userProfile) {
-        for(Goals goal: userProfile.getGoalsList()) {
-            goal.setStartDate(Instant.now());
-            goal.setStatus(GoalStatus.STARTED.getCode());
-            return updateUserProfile(userProfile);
-        }
-        return null;
+        userProfile.getGoalsList().set(0, restartTimer(userProfile.getGoalsList().getFirst()));
+        return updateUserProfile(userProfile);
     }
 }

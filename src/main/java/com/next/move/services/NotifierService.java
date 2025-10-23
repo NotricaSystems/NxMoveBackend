@@ -8,16 +8,31 @@ import com.next.move.models.Goals;
 import com.next.move.models.Notifications;
 import com.next.move.models.UserProfile;
 import com.next.move.utilities.DateUtils;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 
 @Service
 public class NotifierService {
+
+    @Value("${twilio.opt.out1}")
+    private String OPTOUT1;
+    @Value("${twilio.opt.out2}")
+    private String OPTOUT2;
+    @Value("${twilio.opt.in1}")
+    private String OPTIN1;
+    @Value("${twilio.opt.in2}")
+    private String OPTIN2;
+    @Value("${twilio.opt.out.reply}")
+    private String OPTOUTREPLY;
+    @Value("${twilio.opt.in.reply}")
+    private String OPTINREPLY;
 
     private final DataService dataService;
     private final TwilioService twilioService;
@@ -40,9 +55,18 @@ public class NotifierService {
         System.out.println(latestNotification);
 
         if (latestNotification.isPresent()) {
+            String replyBack;
             //I need to fetch the goal to generate a better prompt
             Goals goal = dataService.getTheGoal(latestNotification.get().getGoalId());
-            String replyBack = chatGptService.aiReplyBackGenerator(goal, latestNotification.get(), usersMessage);
+            if (Objects.equals(usersMessage.trim().toUpperCase(), OPTOUT1) || Objects.equals(usersMessage.trim().toUpperCase(), OPTOUT2)) {
+                dataService.updateGoal(conductorService.pauseTimer(goal));
+                replyBack = OPTOUTREPLY;
+            } else if (Objects.equals(usersMessage.trim().toUpperCase(), OPTIN1) || Objects.equals(usersMessage.trim().toUpperCase(), OPTIN2)) {
+                dataService.updateGoal(conductorService.restartTimer(goal));
+                replyBack = OPTINREPLY;
+            } else {
+                replyBack = chatGptService.aiReplyBackGenerator(goal, latestNotification.get(), usersMessage);
+            }
             latestNotification.ifPresent(n -> {
                 n.setUsersReply(usersMessage);
                 n.setReplyBack(replyBack);
@@ -64,7 +88,7 @@ public class NotifierService {
         for (Goals goal : activeGoals) {
             try {
                 long seconds = ChronoUnit.SECONDS.between(goal.getStartDate(), Instant.now());
-                if (!goal.getNotified() || seconds >= (60L * goal.getFrequency() - 15)) {
+                if (askedForNotification(goal) && (!goal.getNotified() || seconds >= (60L * goal.getFrequency() - 15))) {
                     goal.setStartDate(Instant.now());
                     goal.setRemainingSeconds(goal.getRemainingSeconds() - (int) seconds);
                     goal.setNotified(true);
@@ -75,8 +99,8 @@ public class NotifierService {
                         timeIsUp = true;
                     }
                     this.dataService.updateGoal(goal);
+                    notifText = chatGptService.aiNotifGenerator(goal, timeIsUp);
                     if (askedForText(goal)) {
-                        notifText = chatGptService.aiNotifGenerator(goal, timeIsUp);
                         twilioService.sendText(goal.getUserProfile().getPhone(), notifText, goal);
                     }
                     updateNotifications(goal, notifText);
@@ -88,6 +112,10 @@ public class NotifierService {
     }
     private boolean askedForText(Goals goal) {
         return goal.getSmsNotif() || goal.getWhatsappNotif();
+    }
+
+    private boolean askedForNotification(Goals goal) {
+        return goal.getBrowserNotif() || goal.getSmsNotif() || goal.getWhatsappNotif();
     }
 
     private void updateNotifications(Goals goal, String notifText) {

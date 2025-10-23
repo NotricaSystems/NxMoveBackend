@@ -28,5 +28,4 @@ public class Notifications {
     @Column(length = 1000)
     private String replyBack;
     private Boolean browserNotified;
-    //private NotifType notifType;
 }
