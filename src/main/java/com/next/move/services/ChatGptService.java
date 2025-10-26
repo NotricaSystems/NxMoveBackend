@@ -113,7 +113,7 @@ public class ChatGptService {
             }
         }
         System.out.println(prompt);
-        return censorContent(askChatGpt(prompt.toString())) + " Send PAUSE to stop messages.";
+        return censorContent(askChatGpt(prompt.toString()));
     }
 
     public String aiReplyBackGenerator(Goals goal, Notifications latestNotification, String usersMessage) {

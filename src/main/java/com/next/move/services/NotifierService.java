@@ -101,7 +101,7 @@ public class NotifierService {
                     this.dataService.updateGoal(goal);
                     notifText = chatGptService.aiNotifGenerator(goal, timeIsUp);
                     if (askedForText(goal)) {
-                        twilioService.sendText(goal.getUserProfile().getPhone(), notifText, goal);
+                        twilioService.sendText(goal.getUserProfile().getPhone(), notifText + "... Send PAUSE to pause your goal.", goal);
                     }
                     updateNotifications(goal, notifText);
                 }
